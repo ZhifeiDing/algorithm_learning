@@ -6,7 +6,8 @@ void gen_array(int n, vector<int> & data, int base_start, int base_end) {
     data.push_back( rand() % (base_end - base_start) + base_start );
 }
 
-void print_array(vector<int> & data) {
+void print_array(vector<int> & data, const string s) {
+  cout << s << " : ";
   for(int i = 0; i < data.size(); i++)
     cout << data[i] << " ";
   cout << endl;

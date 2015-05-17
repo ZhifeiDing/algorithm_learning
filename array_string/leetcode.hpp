@@ -19,7 +19,7 @@
 using namespace std;
 
 void gen_array(int n, vector<int> & data, int base_start = 0, int base_end = 97);
-void print_array(vector<int> & data);
+void print_array(vector<int> & data, const string s = "Data");
 void gen_string(string & s, int n = 13, bool strict = false);
 void print_string(string & s);
 
@@ -77,5 +77,9 @@ bool isOneEditDistance(string & s, string & t);
 
 int sameNum(int X, int A[], int N);
 void test_sameNum(void);
+
+int removeElement(vector<int>& nums, int val);
+void test_removeElement(void);
+
 #endif
 
