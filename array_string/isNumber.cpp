@@ -44,6 +44,8 @@
  * “.1”, and “1.0” are all valid. Please note that “1.” is valid because it implies 
  * “1.0”.
  */
+
+/*
 bool isNumber(string s) {
   int i = 0;
   int l = s.size();
@@ -66,4 +68,38 @@ bool isNumber(string s) {
   }
 
   return fraction || integer;
+}
+*/
+// update to account for the 1e3
+//
+bool isNumber(string s) {
+        int n = s.size();
+	int i = 0;
+	//discard the white space in the begin and end
+	 while( i < n && s[i] == ' ' ) i++;
+	 while( n > i + 1 && s[n-1] == ' ' ) n--;
+	 if( i < n && ( s[i] == '+' || s[i] == '-' ) ) i++;
+	 bool isNum = false;
+	 while( i < n && s[i] <= '9' && s[i] >= '0' ) {
+	        isNum = true;
+	        i++;
+	 }
+	 if( i < n && s[i] == '.' ) {
+	       i++;
+	       while( i < n && s[i] <= '9' && s[i] >= '0' ) {
+	               isNum = true;
+	               i++;
+	       }
+	  }
+	  if( isNum && i < n && s[i] == 'e' ) {
+	         i++;
+	         isNum = false;
+	         if( i < n && ( s[i] == '+' || s[i] == '-' ) ) i++;
+	         while( i < n && s[i] <= '9' && s[i] >= '0' ) {
+	                isNum = true;
+	                i++;
+	         }
+	  }
+          return isNum && i == n;
+
 }
