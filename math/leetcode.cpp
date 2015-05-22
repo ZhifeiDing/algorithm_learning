@@ -37,7 +37,7 @@ void print_string(string & s) {
 
 void print_list(ListNode* p, const string & s) {
   cout << s << " : ";
-  while( !p ) {
+  while( p ) {
     cout << p->val << " ";
     p = p->next;
   }

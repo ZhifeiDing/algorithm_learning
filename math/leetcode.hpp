@@ -36,5 +36,11 @@ class ListNode {
 int trailingZeroes(int n);
 void test_trailingZeroes(void);
 
+uint32_t reverseBits(uint32_t n);
+uint32_t reverseBits_lookup(uint32_t n);
+void test_reverseBits();
+
+int findPeakElement(vector<int>& nums);
+void test_findPeakElement(void);
 #endif
 
