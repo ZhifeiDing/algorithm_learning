@@ -81,5 +81,13 @@ void test_sameNum(void);
 int removeElement(vector<int>& nums, int val);
 void test_removeElement(void);
 
+vector<vector<string> > solveNQueens(int n);
+void nQueens(vector<vector<string> > & r, vector<string> & s, int row);
+bool isValid( vector<string> & s, int row, int col);
+void test_solveNQueens(void);
+
+int maximumGap(vector<int>& nums);
+void test_maximumGap(void);
+
 #endif
 
