@@ -7,14 +7,14 @@ typedef void (*func)(void);
 int main() {
 	vector<func> test_cases;
 	vector<string> func_names;
-	test_cases.push_back(test_mergeKLists);
-	func_names.push_back("test_mergeKLists");
+	test_cases.push_back(test_removeElements);
+	func_names.push_back("test_removeElements");
 	test_cases.push_back(test_swapPairs);
 	func_names.push_back("test_swapPairs");
-	test_cases.push_back(test_mergeTwoLists);
-	func_names.push_back("test_mergeTwoLists");
 	test_cases.push_back(test_addTwoNumbers);
 	func_names.push_back("test_addTwoNumbers");
+	test_cases.push_back(test_mergeTwoLists);
+	func_names.push_back("test_mergeTwoLists");
 	while(true) {
 		char select;
 		cout << "Please choose a case:" << endl;

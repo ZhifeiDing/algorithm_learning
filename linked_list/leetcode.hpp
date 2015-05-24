@@ -49,5 +49,8 @@ ListNode* swapPairs(ListNode* l);
 ListNode* mergeKLists(vector<ListNode*> & lists);
 void test_mergeKLists(void);
 
+ListNode* removeElements(ListNode* head, int val);
+void test_removeElements(void);
+
 #endif
 
