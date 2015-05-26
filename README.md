@@ -5,3 +5,4 @@ algorithm learning and implementation in C++
 ## link list
 ## dynamic programming
 ## tree
+## greedy
