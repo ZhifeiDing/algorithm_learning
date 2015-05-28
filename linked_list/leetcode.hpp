@@ -52,5 +52,8 @@ void test_mergeKLists(void);
 ListNode* removeElements(ListNode* head, int val);
 void test_removeElements(void);
 
+ListNode* reverseBetween(ListNode* head, int m, int n);
+void test_reverseBetween(void);
+
 #endif
 
