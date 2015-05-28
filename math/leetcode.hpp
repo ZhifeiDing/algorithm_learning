@@ -9,6 +9,7 @@
 #include<ctime>
 #include<utility>
 #include<unordered_map>
+#include<unordered_set>
 #include<algorithm>
 #include<bitset>
 #include<sstream>
@@ -42,5 +43,9 @@ void test_reverseBits();
 
 int findPeakElement(vector<int>& nums);
 void test_findPeakElement(void);
+
+void test_isHappy(void);
+bool isHappy(int n);
+
 #endif
 
