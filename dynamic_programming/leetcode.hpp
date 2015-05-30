@@ -18,7 +18,7 @@
 using namespace std;
 
 void gen_array(int n, vector<int> & data, int base = 97);
-void print_array(vector<int> & data);
+void print_array(vector<int> & data, const string & s = "Original");
 void gen_string(string & s, int n , bool strict );
 void print_string(string & s);
 
@@ -40,6 +40,9 @@ void test_numDistinct(void);
 bool canJump(vector<int>& nums);
 bool canJump_start(vector<int>& nums);
 void test_canJump(void);
+
+int maxProfit(vector<int>& prices);
+void test_maxProfit(void);
 
 #endif
 
