@@ -44,5 +44,8 @@ void test_canJump(void);
 int maxProfit(vector<int>& prices);
 void test_maxProfit(void);
 
+bool isInterleave(string s1, string s2, string s3);
+void test_isInterleave(void);
+
 #endif
 
