@@ -16,5 +16,8 @@ void test_reverseWords(void) {
   print_string(s);
   string r = reverseWords(s);
   print_string(r);
+  r = reverseWords_2pass(s);
+  print_string(r);
+
 }
 

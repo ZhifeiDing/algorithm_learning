@@ -38,3 +38,53 @@ string reverseWords(const string & s) {
   return r;
 }
 
+void reverseAWord(string & s, int l, int r) {
+    while( l < r ) {
+        swap(s[l], s[r]);
+        l++;
+        r--;
+    }
+}
+
+
+string reverseWords_2pass(const string & r) {
+   string s = r;
+    // reduce leadig and trailing sapces
+    int i = 0;
+    while( i < s.size() && s[i] == ' ' ) 
+        i++;
+    int j = s.size()-1;
+    while( i < j && s[j] == ' ' )
+        j--;
+    if( i > j ) {  
+        s = s.substr(0,0); 
+        return s; 
+    }
+    s = s.substr(i,j-i+1);
+    
+    i = 0;
+    j = i;
+    while( i < s.size() ) {
+        if( s[i] == ' ' || i == s.size()-1 ) {
+            while( j > 0 && s[j] == ' ' )
+                j--;
+            if( j == 0 ) 
+              reverseAWord(s, j, i-1);
+            else
+              reverseAWord(s, j+1, i);
+            j = i;
+            while( i < s.size() - 2 && s[i] == ' ' )
+                i++;
+        }
+        i++;
+    }
+    
+    // reduce all the spaces at the end
+    i = s.size()-1;
+    while( i > 0 && s[i] == ' ' )
+        i--;
+    s = s.substr(0, i+1);
+    
+    reverseAWord(s, 0, s.size()-1);
+    return s;    
+}
