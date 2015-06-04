@@ -37,5 +37,8 @@ class ListNode {
 void test_combinationSum(void);
 vector<vector<int>> combinationSum(vector<int>& candidates, int target);
 
+vector<vector<int>> threeSum(vector<int>& nums);
+void test_threeSum(void);
+
 #endif
 

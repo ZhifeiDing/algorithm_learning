@@ -89,5 +89,7 @@ void test_solveNQueens(void);
 int maximumGap(vector<int>& nums);
 void test_maximumGap(void);
 
+string reverseWords_2pass(const string & r);
+
 #endif
 
