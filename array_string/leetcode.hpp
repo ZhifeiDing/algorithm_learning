@@ -10,6 +10,7 @@
 #include<utility>
 #include<cstdlib>
 #include<unordered_map>
+#include<unordered_set>
 #include<algorithm>
 #include<bitset>
 #include<sstream>
@@ -90,6 +91,12 @@ int maximumGap(vector<int>& nums);
 void test_maximumGap(void);
 
 string reverseWords_2pass(const string & r);
+
+vector<string> findRepeatedDnaSequences(string s);
+void test_findRepeatedDnaSequences();
+
+void merge(vector<int>& nums1, int m, vector<int>& nums2, int n);
+void test_merge(void);
 
 #endif
 
