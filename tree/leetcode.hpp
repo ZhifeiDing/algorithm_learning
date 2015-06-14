@@ -29,7 +29,7 @@ struct TreeNode {
       TreeNode *left;
       TreeNode *right;
       TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-      //TreeNode(int x, TreeNode* l, TreeNode* r) : val(x), left(l), right(r) {}
+      TreeNode(int x, TreeNode* l, TreeNode* r) : val(x), left(l), right(r) {}
 };
 
 vector<vector<int> > levelOrderBottom(TreeNode* root);
@@ -37,6 +37,13 @@ void test_levelOrderBottom(void);
 
 void test_sumNumbers(void);
 int sumNumbers(TreeNode* root);
+
+bool hasPathSum_recursive(TreeNode* root, int sum);
+bool hasPathSum_dfs(TreeNode* root, int sum);
+void test_hasPathSum(void);
+
+void test_invertTree();
+TreeNode* invertTree(TreeNode* root);
 
 #endif
 

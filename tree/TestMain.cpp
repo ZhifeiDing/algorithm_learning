@@ -7,6 +7,10 @@ typedef void (*func)(void);
 int main() {
 	vector<func> test_cases;
 	vector<string> func_names;
+	test_cases.push_back(test_invertTree);
+	func_names.push_back("test_invertTree");
+	test_cases.push_back(test_hasPathSum);
+	func_names.push_back("test_hasPathSum");
 	test_cases.push_back(test_sumNumbers);
 	func_names.push_back("test_sumNumbers");
 	test_cases.push_back(test_levelOrderBottom);
