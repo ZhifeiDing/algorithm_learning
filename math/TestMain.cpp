@@ -7,12 +7,16 @@ typedef void (*func)(void);
 int main() {
 	vector<func> test_cases;
 	vector<string> func_names;
+	test_cases.push_back(test_rotate);
+	func_names.push_back("test_rotate");
+	test_cases.push_back(test_singleNumber);
+	func_names.push_back("test_singleNumber");
 	test_cases.push_back(test_isHappy);
 	func_names.push_back("test_isHappy");
-	test_cases.push_back(test_reverseBits);
-	func_names.push_back("test_reverseBits");
 	test_cases.push_back(test_findPeakElement);
 	func_names.push_back("test_findPeakElement");
+	test_cases.push_back(test_reverseBits);
+	func_names.push_back("test_reverseBits");
 	test_cases.push_back(test_trailingZeroes);
 	func_names.push_back("test_trailingZeroes");
 	while(true) {

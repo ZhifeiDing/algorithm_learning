@@ -47,5 +47,11 @@ void test_findPeakElement(void);
 void test_isHappy(void);
 bool isHappy(int n);
 
+int singleNumber(vector<int>& nums);
+void test_singleNumber();
+
+void rotate(vector<vector<int> > & matrix);
+void test_rotate();
+
 #endif
 
