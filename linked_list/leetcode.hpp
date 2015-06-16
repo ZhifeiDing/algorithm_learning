@@ -14,6 +14,7 @@
 #include<sstream>
 #include<string>
 #include<cstdlib>
+#include<queue>
 
 using namespace std;
 
@@ -33,6 +34,16 @@ class ListNode {
     explicit ListNode(int x,ListNode* l) : val(x),next(l) {};
 };
 
+struct RandomListNode {
+    int label;
+    RandomListNode *next, *random;
+    RandomListNode(int x) : label(x), next(NULL), random(NULL) {}
+};
+
+
+RandomListNode *copyRandomList(RandomListNode *head);
+void test_copyRandomList(void);
+
 void delete_list(ListNode* p);
 
 void print_list(ListNode* p, const string & s = "");
@@ -42,6 +53,10 @@ ListNode* mergeTwoLists(ListNode*  l1, ListNode* l2);
 void test_mergeTwoLists(void);
 void test_addTwoNumbers(void);
 ListNode* addTwoNumbers(ListNode* l1, ListNode* l2);
+
+ListNode *mergeKLists(vector<ListNode *> &lists);
+ListNode *mergeKLists_heap(vector<ListNode *> &lists);
+void test_mergeKLists();
 
 void test_swapPairs(void);
 ListNode* swapPairs(ListNode* l);
@@ -54,6 +69,9 @@ void test_removeElements(void);
 
 ListNode* reverseBetween(ListNode* head, int m, int n);
 void test_reverseBetween(void);
+
+ListNode* deleteDuplicates(ListNode* head);
+void test_deleteDuplicates();
 
 #endif
 
