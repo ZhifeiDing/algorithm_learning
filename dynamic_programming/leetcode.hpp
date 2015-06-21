@@ -22,6 +22,8 @@ void print_array(vector<int> & data, const string & s = "Original");
 void gen_string(string & s, int n , bool strict );
 void print_string(string & s);
 
+int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid);
+void test_uniquePathsWithObstacles();
 
 
 class ListNode {
@@ -47,5 +49,7 @@ void test_maxProfit(void);
 bool isInterleave(string s1, string s2, string s3);
 void test_isInterleave(void);
 
+int rob(vector<int>& nums);
+void test_rob();
 #endif
 
