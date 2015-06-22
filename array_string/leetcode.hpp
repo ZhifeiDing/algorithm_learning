@@ -15,6 +15,7 @@
 #include<bitset>
 #include<sstream>
 #include<string>
+#include<stack>
 #include "twoSumDataStructure.hpp"
 
 using namespace std;
@@ -23,6 +24,9 @@ void gen_array(int n, vector<int> & data, int base_start = 0, int base_end = 97)
 void print_array(vector<int> & data, const string s = "Data");
 void gen_string(string & s, int n = 13, bool strict = false);
 void print_string(string & s);
+
+bool isValid(string s);
+void test_isValid();
 
 vector<int> twoSum(vector<int> & numbers, int target);
 vector<int> twoSum_hash(vector<int> & numbers, int target);

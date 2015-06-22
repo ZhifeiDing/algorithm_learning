@@ -54,6 +54,10 @@ void test_mergeTwoLists(void);
 void test_addTwoNumbers(void);
 ListNode* addTwoNumbers(ListNode* l1, ListNode* l2);
 
+ListNode* reverseList_recursive(ListNode* head);
+ListNode* reverseList(ListNode* head);
+void test_reverseList();
+
 ListNode *mergeKLists(vector<ListNode *> &lists);
 ListNode *mergeKLists_heap(vector<ListNode *> &lists);
 void test_mergeKLists();
