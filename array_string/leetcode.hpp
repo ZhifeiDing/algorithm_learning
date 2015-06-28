@@ -102,5 +102,8 @@ void test_findRepeatedDnaSequences();
 void merge(vector<int>& nums1, int m, vector<int>& nums2, int n);
 void test_merge(void);
 
+vector<string> summaryRanges(vector<int>& nums);
+void test_summaryRanges();
+
 #endif
 

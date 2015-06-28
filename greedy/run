@@ -1,0 +1,106 @@
+#!/usr/bin/perl -w
+#
+#
+my $test_main = "TestMain.cpp";
+my $test_main_exec = $test_main;
+$test_main_exec =~ s/\.cpp//;
+my @test_cases_list = glob("test_*.cpp");
+
+## sort testcases according to the modified time
+my %test_cases = ();
+foreach my $test_case (@test_cases_list) {
+  #print("$test_case\n");
+  my $mtime = (stat($test_case))[9];
+  #print("$mtime\n");
+  $test_cases{$mtime} = $test_case;
+}
+my @mtimes = sort{$a < $b}(keys %test_cases);
+#(my $t,my $y) = each %test_cases;
+#print("$t $y\n");
+#print("@mtimes\n");
+
+my $first_part = <<FIRST_PART;
+#include "leetcode.hpp"
+
+using namespace std;
+
+typedef void (*func)(void);
+
+int main() {
+	vector<func> test_cases;
+	vector<string> func_names;
+FIRST_PART
+
+my $second_part = <<SECOND_PART;
+	while(true) {
+		char select;
+		cout << "Please choose a case:" << endl;
+		for(int i = 0; i < func_names.size(); i++)
+			cout << "[ " << i << "\t]: " << func_names[i] << endl;
+	cin >> select;
+	if( select == 'q' || select == 'Q')
+	  break;
+	int s = (unsigned int)atoi(&select);
+	if( s >= test_cases.size() ) {
+	  cout << "Wrong choices !" << endl;
+	  continue;
+	}
+	(*test_cases[s])();
+	}
+	return 0;
+}
+SECOND_PART
+
+## generate ${test_main}
+if( -e ${test_main} ) {
+  print("removing ${test_main}\n");
+  system("rm -f ${test_main}");
+}
+
+open(WFH, ">${test_main}") or die "can't open ${test_main} : $!!\n";
+print(WFH ${first_part});
+foreach my $m (@mtimes) {
+  my $test_case = $test_cases{$m};
+  my $func_name = $test_case;
+  $func_name =~ s/\.cpp//;
+  print(WFH "\ttest_cases.push_back(${func_name});\n");
+  print(WFH "\tfunc_names.push_back(\"${func_name}\");\n");
+}
+print(WFH ${second_part});
+close(WFH);
+
+## generate makefile
+if( -e "makefile" ) {
+  print("removing makefile\n");
+  system("rm -f makefile");
+}
+if( ! -d "obj" ) {
+  system("mkdir obj");
+}
+
+my $makefile = <<MAKEFILE;
+test_main = ${test_main}
+test_main_exec = \$(patsubst %.cpp,%, \$(test_main))
+test_cases = \$(wildcard test_*.cpp)
+func_names = \$(patsubst %.cpp, %,\$(test_cases))
+#cases = \$(patsubst %test_,%,\$(test_cases))
+cases = \$(shell echo \$(test_cases) | sed -e 's/test_//g') leetcode.cpp
+
+
+.PHONY:run
+run:TestMain
+	\@chmod u+x \$(test_main_exec)
+	\@./\$(test_main_exec)
+
+.PHONY:TestMain
+TestMain:\$(cases)
+	g++ -g -std=c++11 \$(test_main) \$(cases) \$(test_cases) -o \$(test_main_exec)
+MAKEFILE
+
+open(WFH, ">makefile") or die "can't open makefile : $!!\n";
+print(WFH $makefile);
+close(WFH);
+
+## run the testcases
+system("make");
+
