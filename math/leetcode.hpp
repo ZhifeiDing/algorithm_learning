@@ -53,5 +53,7 @@ void test_singleNumber();
 void rotate(vector<vector<int> > & matrix);
 void test_rotate();
 
+int calculate(string s);
+void test_calculate(void);
 #endif
 
