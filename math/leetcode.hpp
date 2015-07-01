@@ -55,5 +55,8 @@ void test_rotate();
 
 int calculate(string s);
 void test_calculate(void);
+
+int countPrimes(int n);
+void test_countPrimes();
 #endif
 
