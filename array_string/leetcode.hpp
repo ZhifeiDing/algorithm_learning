@@ -25,6 +25,9 @@ void print_array(vector<int> & data, const string s = "Data");
 void gen_string(string & s, int n = 13, bool strict = false);
 void print_string(string & s);
 
+vector<string> anagrams(vector<string>& strs);
+void test_anagrams();
+
 bool isValid(string s);
 void test_isValid();
 
