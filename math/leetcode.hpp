@@ -14,6 +14,7 @@
 #include<bitset>
 #include<sstream>
 #include<string>
+#include<cstddef>
 #include<cstdlib>
 
 using namespace std;
@@ -58,5 +59,10 @@ void test_calculate(void);
 
 int countPrimes(int n);
 void test_countPrimes();
+int calculateII(string s);
+void test_calculateII();
+
+vector<int> majorityElement(vector<int> & nums);
+void test_majorityElement();
 #endif
 
