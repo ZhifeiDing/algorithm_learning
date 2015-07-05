@@ -45,5 +45,10 @@ void test_hasPathSum(void);
 void test_invertTree();
 TreeNode* invertTree(TreeNode* root);
 
+int kthSmallest(TreeNode* root, int k);
+void test_kthSmallest();
+int kthSmallest_iterative(TreeNode* root, int k);
+void test_kthSmallest_iterative();
+
 #endif
 
