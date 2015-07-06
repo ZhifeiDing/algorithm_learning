@@ -64,5 +64,9 @@ void test_calculateII();
 
 vector<int> majorityElement(vector<int> & nums);
 void test_majorityElement();
+
+bool isPowerOfTwo_online(int n);
+bool isPowerOfTwo(int n);
+void test_isPowerOfTwo();
 #endif
 
