@@ -39,5 +39,7 @@ class ListNode {
 void test_Stack();
 
 void test_MinStack();
+
+void test_Queue();
 #endif
 

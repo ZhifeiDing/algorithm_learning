@@ -7,10 +7,12 @@ typedef void (*func)(void);
 int main() {
 	vector<func> test_cases;
 	vector<string> func_names;
-	test_cases.push_back(test_MinStack);
-	func_names.push_back("test_MinStack");
+	test_cases.push_back(test_Queue);
+	func_names.push_back("test_Queue");
 	test_cases.push_back(test_Stack);
 	func_names.push_back("test_Stack");
+	test_cases.push_back(test_MinStack);
+	func_names.push_back("test_MinStack");
 	while(true) {
 		char select;
 		cout << "Please choose a case:" << endl;
