@@ -71,5 +71,8 @@ void test_isPowerOfTwo();
 
 int computeArea(int A, int B, int C, int D, int E, int F, int G, int H);
 void test_computeArea();
+
+int countDigitOne(int n);
+void test_countDigitOne();
 #endif
 
