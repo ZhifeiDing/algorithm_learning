@@ -7,16 +7,18 @@ typedef void (*func)(void);
 int main() {
 	vector<func> test_cases;
 	vector<string> func_names;
+	test_cases.push_back(test_countNodes);
+	func_names.push_back("test_countNodes");
 	test_cases.push_back(test_kthSmallest);
 	func_names.push_back("test_kthSmallest");
-	test_cases.push_back(test_hasPathSum);
-	func_names.push_back("test_hasPathSum");
+	test_cases.push_back(test_invertTree);
+	func_names.push_back("test_invertTree");
 	test_cases.push_back(test_sumNumbers);
 	func_names.push_back("test_sumNumbers");
 	test_cases.push_back(test_levelOrderBottom);
 	func_names.push_back("test_levelOrderBottom");
-	test_cases.push_back(test_invertTree);
-	func_names.push_back("test_invertTree");
+	test_cases.push_back(test_hasPathSum);
+	func_names.push_back("test_hasPathSum");
 	while(true) {
 		char select;
 		cout << "Please choose a case:" << endl;

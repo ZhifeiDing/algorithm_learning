@@ -50,5 +50,8 @@ void test_kthSmallest();
 int kthSmallest_iterative(TreeNode* root, int k);
 void test_kthSmallest_iterative();
 
+int countNodes(TreeNode* root);
+void test_countNodes();
+
 #endif
 
