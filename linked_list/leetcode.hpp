@@ -58,6 +58,9 @@ ListNode* reverseList_recursive(ListNode* head);
 ListNode* reverseList(ListNode* head);
 void test_reverseList();
 
+bool isPalindrome(ListNode* head);
+void test_isPalindrome();
+
 ListNode *mergeKLists(vector<ListNode *> &lists);
 ListNode *mergeKLists_heap(vector<ListNode *> &lists);
 void test_mergeKLists();
