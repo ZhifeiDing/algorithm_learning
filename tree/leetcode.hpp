@@ -53,5 +53,8 @@ void test_kthSmallest_iterative();
 int countNodes(TreeNode* root);
 void test_countNodes();
 
+TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q);
+void test_lowestCommonAncestor();
+
 #endif
 
