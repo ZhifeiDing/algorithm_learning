@@ -56,5 +56,8 @@ void test_countNodes();
 TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q);
 void test_lowestCommonAncestor();
 
+TreeNode* lowestCommonAncestorBT(TreeNode* root, TreeNode* p, TreeNode* q);
+void test_lowestCommonAncestorBT();
+
 #endif
 
