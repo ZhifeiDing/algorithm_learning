@@ -61,6 +61,9 @@ void test_reverseList();
 bool isPalindrome(ListNode* head);
 void test_isPalindrome();
 
+void deleteNode(ListNode* node);
+void test_deleteNode();
+
 ListNode *mergeKLists(vector<ListNode *> &lists);
 ListNode *mergeKLists_heap(vector<ListNode *> &lists);
 void test_mergeKLists();
