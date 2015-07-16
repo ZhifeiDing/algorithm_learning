@@ -74,5 +74,8 @@ void test_computeArea();
 
 int countDigitOne(int n);
 void test_countDigitOne();
+
+vector<int> productExceptSelf(vector<int>& nums);
+void test_productExceptSelf();
 #endif
 
