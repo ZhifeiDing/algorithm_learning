@@ -1,9 +1,21 @@
 #include "leetcode.hpp"
+/*
+ * Given a 2D binary matrix filled with 0's and 1's, find the largest 
+ * square containing all 1's and return its area.
+ * 
+ * For example, given the following matrix:
+ * 
+ * 1 0 1 0 0
+ * 1 0 1 1 1
+ * 1 1 1 1 1
+ * 1 0 0 1 0
+ * Return 4.
+ */
 
 int maximalSquare(vector<vector<char> > & matrix) {
-  int m=matrix.length;
+  int m=matrix.size();
   if (m==0) return 0;
-  int n=matrix[0].length;
+  int n=matrix[0].size();
   if (n==0) return 0;
   vector<vector<int> > left(m, vector<int>(n)), top(m,vector<int>(n)), val(m,vector<int>(n));
   for (int i=0;i<m;i++) {
@@ -19,8 +31,8 @@ int maximalSquare(vector<vector<char> > & matrix) {
   int ans = 0;
   for (int i=0;i<m;i++)
       for (int j=0;j<n;j++) {
-          int min=Math.min(left[i][j], top[i][j]);
-          val[i][j]=i*j==0?min:Math.min(min, val[i-1][j-1]+1);
+          int minVal=min(left[i][j], top[i][j]);
+          val[i][j]=i*j==0?minVal:min(minVal, val[i-1][j-1]+1);
           if (ans<val[i][j]) ans=val[i][j];
       }
   return ans*ans;

@@ -51,5 +51,8 @@ void test_isInterleave(void);
 
 int rob(vector<int>& nums);
 void test_rob();
+
+int maximalSquare(vector<vector<char> > & matrix);
+void test_maximalSquare();
 #endif
 
