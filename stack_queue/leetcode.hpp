@@ -41,5 +41,8 @@ void test_Stack();
 void test_MinStack();
 
 void test_Queue();
+
+vector<int> maxSlidingWindow(vector<int>& nums, int k);
+void test_maxSlidingWindow();
 #endif
 
