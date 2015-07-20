@@ -24,6 +24,8 @@ void print_array(vector<int> & data);
 void gen_string(string & s, int n , bool strict );
 void print_string(string & s);
 
+void rotateI(vector<int>& nums, int k);
+void test_rotateI();
 
 
 class ListNode {
