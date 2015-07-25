@@ -79,5 +79,14 @@ void test_countDigitOne();
 
 vector<int> productExceptSelf(vector<int>& nums);
 void test_productExceptSelf();
+
+bool containsNearbyDuplicate(vector<int> & nums, int k);
+void test_containsNearbyDuplicate();
+
+bool containsDuplicate(vector<int> & nums);
+void test_containsDuplicate();
+
+bool containsNearbyAlmostDuplicate(vector<int>& nums, int k, int t);
+void test_containsNearbyAlmostDuplicate();
 #endif
 
