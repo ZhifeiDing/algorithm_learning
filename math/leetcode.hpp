@@ -88,5 +88,8 @@ void test_containsDuplicate();
 
 bool containsNearbyAlmostDuplicate(vector<int>& nums, int k, int t);
 void test_containsNearbyAlmostDuplicate();
+
+bool searchMatrix(vector<vector<int>>& matrix, int target);
+void test_searchMatrix();
 #endif
 
