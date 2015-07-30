@@ -54,5 +54,8 @@ void test_rob();
 
 int maximalSquare(vector<vector<char> > & matrix);
 void test_maximalSquare();
+
+vector<int> diffWaysToCompute(string input);
+void test_diffWaysToCompute();
 #endif
 
