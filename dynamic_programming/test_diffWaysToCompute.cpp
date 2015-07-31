@@ -5,4 +5,6 @@ void test_diffWaysToCompute() {
   vector<int> r = diffWaysToCompute(input);
   cout << input << " = " << endl;
   print_array(r);
+  r = diffWaysToCompute_DP(input);
+  print_array(r);
 }

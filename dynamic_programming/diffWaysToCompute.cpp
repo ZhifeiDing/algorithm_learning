@@ -44,3 +44,45 @@ vector<int> diffWaysToCompute(string input) {
   } while( (cutPoint = input.find_first_of("+-*",cutPoint+1)) != string::npos );
   return r;
 }
+
+/*
+ * dynamic programming -- key point : many expression have been calculated, we could take advantage of it.
+ */
+vector<int> diffWaysToComputeDP(string input, unordered_map<string, vector<int> > & expRecord) {
+  vector<int> r;
+  auto cutPoint = input.find_first_of("+-*",0);
+  if( cutPoint == string::npos ) {
+    r.push_back(atoi(input.c_str()));
+    expRecord[input] = r;
+    return r;
+  }
+  do {
+    vector<int> r1, r2;
+    if( expRecord.find(input.substr(0,cutPoint)) == expRecord.end() )
+      r1 = diffWaysToComputeDP(input.substr(0,cutPoint), expRecord);
+    else
+      r1 = expRecord[input.substr(0,cutPoint)];
+
+    if( expRecord.find(input.substr(cutPoint+1)) == expRecord.end() )
+      r2 = diffWaysToComputeDP(input.substr(cutPoint+1), expRecord);
+    else
+      r2 = expRecord[input.substr(cutPoint+1)];
+
+    for(auto itr1 : r1)
+      for(auto itr2 : r2)
+        if( input[cutPoint] == '-' )
+          r.push_back(itr1 - itr2);
+        else if( input[cutPoint] == '+' )
+          r.push_back(itr1 + itr2);
+        else
+          r.push_back(itr1 * itr2);
+  } while( ( cutPoint = input.find_first_of("+-*",cutPoint + 1) ) != string::npos );
+
+  expRecord[input] = r;
+  return r;
+}
+
+vector<int> diffWaysToCompute_DP(string input) {
+  unordered_map<string, vector<int> > expRecord;
+  return diffWaysToComputeDP(input, expRecord);
+}
