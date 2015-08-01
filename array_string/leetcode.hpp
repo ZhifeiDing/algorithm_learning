@@ -108,5 +108,7 @@ void test_merge(void);
 vector<string> summaryRanges(vector<int>& nums);
 void test_summaryRanges();
 
+bool isAnagram(string s, string t);
+void test_isAnagram();
 #endif
 

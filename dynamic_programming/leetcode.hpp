@@ -57,5 +57,6 @@ void test_maximalSquare();
 
 vector<int> diffWaysToCompute(string input);
 void test_diffWaysToCompute();
+vector<int> diffWaysToCompute_DP(string input);
 #endif
 
