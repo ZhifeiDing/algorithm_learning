@@ -40,3 +40,28 @@ int findKthLargest(vector<int> & nums, int k) {
   }
   return nums[idx];
 }
+
+void adjustHeap(vector<int> & nums, int n, int size) {
+  int nchild = 2 * n + 1;
+  while( nchild < size ) {
+    if( nchild + 1 < size && nums[nchild+1] < nums[nchild] )
+      nchild++;
+    if( nums[n] < nums[nchild] )
+      break;
+    swap(nums[n], nums[nchild]);
+    n = nchild;
+    nchild = 2*n + 1;
+  }
+}
+
+int findKthLargest_minHeap(vector<int> & nums, int k) {
+  for(int i = k/2 - 1; i >= 0; i--)
+    adjustHeap(nums, i, k);
+  for(int i = k; i < nums.size(); i++) {
+    if( nums[i] > nums[0] ) {
+      nums[0] = nums[i];
+      adjustHeap(nums, 0, k);
+    }
+  }
+  return nums[0];
+}

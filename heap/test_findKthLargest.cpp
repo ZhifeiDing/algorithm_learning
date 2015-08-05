@@ -10,4 +10,6 @@ void test_findKthLargest() {
   int r = findKthLargest(nums, k);
   cout << k << "th largest = " << r << endl;
   print_array(nums);
+  r = findKthLargest_minHeap(nums,k);
+  cout << k << "th largest = " << r << endl;
 }
