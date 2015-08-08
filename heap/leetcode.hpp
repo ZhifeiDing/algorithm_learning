@@ -47,5 +47,9 @@ void test_maxSlidingWindow();
 
 vector<pair<int, int> > getSkyline(vector<vector<int>>& buildings);
 void test_getSkyline();
+
+int findKthLargest(vector<int> & nums, int k);
+void test_findKthLargest();
+int findKthLargest_minHeap(vector<int> & nums, int k);
 #endif
 

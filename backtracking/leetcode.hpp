@@ -40,5 +40,7 @@ vector<vector<int>> combinationSum(vector<int>& candidates, int target);
 vector<vector<int>> threeSum(vector<int>& nums);
 void test_threeSum(void);
 
+vector<vector<int> > combinationSum3(int k, int n);
+void test_combinationSum3();
 #endif
 
