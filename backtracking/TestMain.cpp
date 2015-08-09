@@ -7,6 +7,8 @@ typedef void (*func)(void);
 int main() {
 	vector<func> test_cases;
 	vector<string> func_names;
+	test_cases.push_back(test_WordDictionary);
+	func_names.push_back("test_WordDictionary");
 	test_cases.push_back(test_combinationSum3);
 	func_names.push_back("test_combinationSum3");
 	test_cases.push_back(test_threeSum);

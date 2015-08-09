@@ -42,5 +42,7 @@ void test_threeSum(void);
 
 vector<vector<int> > combinationSum3(int k, int n);
 void test_combinationSum3();
+
+void test_WordDictionary();
 #endif
 
