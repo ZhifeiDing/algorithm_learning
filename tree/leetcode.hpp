@@ -21,7 +21,7 @@ using namespace std;
 void gen_array(int n, vector<int> & data, int base = 97);
 void print_array(vector<int> & data);
 void print_2d_array(vector<vector<int> > & data);
-void gen_string(string & s, int n , bool strict );
+void gen_string(string & s, int n , bool strict = true);
 void print_string(string & s);
 
 struct TreeNode {
@@ -59,5 +59,6 @@ void test_lowestCommonAncestor();
 TreeNode* lowestCommonAncestorBT(TreeNode* root, TreeNode* p, TreeNode* q);
 void test_lowestCommonAncestorBT();
 
+void test_Trie();
 #endif
 
