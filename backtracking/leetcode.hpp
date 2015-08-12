@@ -44,5 +44,8 @@ vector<vector<int> > combinationSum3(int k, int n);
 void test_combinationSum3();
 
 void test_WordDictionary();
+
+vector<string> findWords(vector<vector<char>>& board, vector<string>& words);
+void test_findWords();
 #endif
 
