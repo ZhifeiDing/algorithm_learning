@@ -8,4 +8,5 @@ void test_minSubArrayLen() {
   print_array(nums);
   int s = rand()%11;
   cout << "Minimum length of " << s << " = " << minSubArrayLen(s,nums) << endl;
+  cout << "Minimum length of " << s << " = " << minSubArrayLen_BS(s,nums) << endl;
 }

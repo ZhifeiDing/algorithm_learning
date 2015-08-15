@@ -110,5 +110,9 @@ void test_summaryRanges();
 
 bool isAnagram(string s, string t);
 void test_isAnagram();
+
+int minSubArrayLen(int s, vector<int> & nums);
+void test_minSubArrayLen();
+int minSubArrayLen_BS(int s, vector<int> & nums);
 #endif
 

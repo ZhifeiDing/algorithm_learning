@@ -14,6 +14,9 @@
  * If you have figured out the O(n) solution, try coding another solution 
  * of which the time complexity is O(n log n).
  */
+/*
+ * two pointer : O(n) 
+ */
 int minSubArrayLen(int s, vector<int> & nums) {
   int right = 0, left = 0;
   int len = nums.size()+1;
@@ -25,6 +28,43 @@ int minSubArrayLen(int s, vector<int> & nums) {
       len = min(len, right - left);
       sum -= nums[left++];
     }
+  }
+  return len == nums.size() + 1 ? 0 : len;
+}
+
+/*
+ * binary search : O(nlogn)
+ * keypoint : maintain a non-decreasing array
+ */
+void accumulate(vector<int> & nums, vector<int> sum) {
+  for(int i = 0; i < nums.size(); i++)
+    sum[i] = sum[i-1] + nums[i];
+}
+
+int upper_bound(vector<int> & nums, int left, int right, int target) {
+  while( left < right ) {
+    int mid = left + ( right - left ) / 2;
+    if( nums[mid] > target )
+      right = mid;
+    else
+      left = mid + 1;
+  }
+  if( nums[right] > target )
+    return right;
+  if( nums[left] > target )
+    return left;
+  return -1;
+}
+int minSubArrayLen_BS(int s, vector<int> & nums) {
+  vector<int> sum(nums.size());
+  if( nums.size() == 0 )
+    return 0;
+  sum[0] = nums[0];
+  accumulate(nums,sum);
+  int len = nums.size() + 1;
+  for(int i = 0; i < nums.size(); i++) {
+    int j = upper_bound(sum, 0, i, sum[i] - s);
+    len = j == -1 ? len : min(len, i - j + 1);
   }
   return len == nums.size() + 1 ? 0 : len;
 }
