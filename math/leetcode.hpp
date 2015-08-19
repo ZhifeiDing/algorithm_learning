@@ -91,5 +91,20 @@ void test_containsNearbyAlmostDuplicate();
 
 bool searchMatrix(vector<vector<int>>& matrix, int target);
 void test_searchMatrix();
+
+int addDigits(int num);
+void test_addDigits();
+
+string convertToTitle(int n);
+void test_convertToTitle();
+
+int titleToNumber(string s);
+void test_titleToNumber();
+
+bool isUgly(int num);
+void test_isUgly();
+
+int nthUglyNumber(int n);
+void test_nthUglyNumber();
 #endif
 
