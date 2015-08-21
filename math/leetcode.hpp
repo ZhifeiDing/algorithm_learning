@@ -106,5 +106,6 @@ void test_isUgly();
 
 int nthUglyNumber(int n);
 void test_nthUglyNumber();
+int nthUglyNumber_set(int n);
 #endif
 
