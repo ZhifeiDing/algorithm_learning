@@ -60,5 +60,14 @@ TreeNode* lowestCommonAncestorBT(TreeNode* root, TreeNode* p, TreeNode* q);
 void test_lowestCommonAncestorBT();
 
 void test_Trie();
+
+vector<int> rightSideView(TreeNode* root);
+void test_rightSideView();
+
+vector<string> binaryTreePaths(TreeNode* root);
+vector<string> binaryTreePaths_recursive(TreeNode* root);
+void test_binaryTreePaths();
+
+vector<string> binaryTreePaths_recursive2(TreeNode* root);
 #endif
 

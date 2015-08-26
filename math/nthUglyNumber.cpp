@@ -67,3 +67,23 @@ int nthUglyNumber_set(int n) {
     }
     return ret;
 }
+
+int nthUglyNumber_DP(int n) {
+  vector<int> ugly;
+  ugly.push_back(1);
+  int v2 = 2, v3 = 3, v5 = 5;
+  int idx2 = 0, idx3 = 0, idx5 = 0;
+  int i = 0;
+  while( i < n ) {
+    int ret = min(v2, min(v3,v5));
+    ugly.push_back(ret);
+    if( ret == v2 )
+      v2 = ugly[++idx2] * 2;
+    if( ret == v3 )
+      v3 = ugly[++idx3] * 3;
+    if( ret == v5 )
+      v5 = ugly[++idx5] * 5;
+    ++i;
+  }
+  return ugly[n-1];
+}

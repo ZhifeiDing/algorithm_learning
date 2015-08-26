@@ -83,5 +83,13 @@ void test_reverseBetween(void);
 ListNode* deleteDuplicates(ListNode* head);
 void test_deleteDuplicates();
 
+bool hasCycle(ListNode *head);
+void test_hasCycle();
+
+void reorderList(ListNode* head);
+void test_reorderList();
+
+ListNode *detectCycle(ListNode *head);
+void test_detectCycle();
 #endif
 

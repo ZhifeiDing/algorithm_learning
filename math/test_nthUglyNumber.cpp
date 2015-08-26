@@ -5,6 +5,8 @@ void test_nthUglyNumber() {
   int n = rand()%20 + 1;
   int r = nthUglyNumber(n);
   cout << n << "th ugly number = " << r << endl;
-  r = nthUglyNumber(n);
+  r = nthUglyNumber_set(n);
+  cout << n << "th ugly number = " << r << endl;
+  r = nthUglyNumber_DP(n);
   cout << n << "th ugly number = " << r << endl;
 }

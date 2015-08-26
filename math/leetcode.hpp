@@ -16,6 +16,7 @@
 #include<string>
 #include<cstddef>
 #include<cstdlib>
+#include<set>
 
 using namespace std;
 
@@ -107,5 +108,9 @@ void test_isUgly();
 int nthUglyNumber(int n);
 void test_nthUglyNumber();
 int nthUglyNumber_set(int n);
+int nthUglyNumber_DP(int n);
+
+int missingNumber(vector<int> & nums);
+void test_missingNumber();
 #endif
 
