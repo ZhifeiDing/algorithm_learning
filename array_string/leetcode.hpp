@@ -114,5 +114,8 @@ void test_isAnagram();
 int minSubArrayLen(int s, vector<int> & nums);
 void test_minSubArrayLen();
 int minSubArrayLen_BS(int s, vector<int> & nums);
+
+double findMedianSortedArrays(vector<int> & nums1, vector<int> & nums2);
+void test_findMedianSortedArrays();
 #endif
 
