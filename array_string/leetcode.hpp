@@ -117,5 +117,8 @@ int minSubArrayLen_BS(int s, vector<int> & nums);
 
 double findMedianSortedArrays(vector<int> & nums1, vector<int> & nums2);
 void test_findMedianSortedArrays();
+
+string convert(string s, int numRows);
+void test_convert();
 #endif
 
