@@ -112,5 +112,11 @@ int nthUglyNumber_DP(int n);
 
 int missingNumber(vector<int> & nums);
 void test_missingNumber();
+
+string numberToWords(int num);
+void test_numberToWords();
+
+bool isPalindrome(int x);
+void test_isPalindrome();
 #endif
 
