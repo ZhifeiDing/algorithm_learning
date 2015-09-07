@@ -51,3 +51,16 @@ int hIndex_heap(vector<int> & citations) {
   }
   return h;
 }
+
+int hIndex_bucksort(vector<int> & citations) {
+  vector<int> cnt(citations.size(),0);
+  for(auto i : citations)
+    if( i < citations.size() )
+      ++cnt[i];
+  int s = 0, h = 0;
+  for(int i = 0; i < citations.size(); i++) {
+    s += cnt[i];
+    h = max(h, i - s + 1);
+  }
+  return h;
+}

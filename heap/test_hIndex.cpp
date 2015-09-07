@@ -6,6 +6,7 @@ void test_hIndex() {
   vector<int> citations;
   gen_array(n, citations);
   print_array(citations);
+  cout << "hIndex = " << hIndex_bucksort(citations) << endl;
   cout << "hIndex = " << hIndex_heap(citations) << endl;
   cout << "hIndex = " << hIndex(citations) << endl;
 }
