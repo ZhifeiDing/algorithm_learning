@@ -7,6 +7,8 @@ typedef void (*func)(void);
 int main() {
 	vector<func> test_cases;
 	vector<string> func_names;
+	test_cases.push_back(test_hIndex);
+	func_names.push_back("test_hIndex");
 	test_cases.push_back(test_maxSlidingWindow);
 	func_names.push_back("test_maxSlidingWindow");
 	test_cases.push_back(test_Queue);

@@ -7,8 +7,12 @@ typedef void (*func)(void);
 int main() {
 	vector<func> test_cases;
 	vector<string> func_names;
+	test_cases.push_back(test_hIndexII);
+	func_names.push_back("test_hIndexII");
 	test_cases.push_back(test_findKthLargest);
 	func_names.push_back("test_findKthLargest");
+	test_cases.push_back(test_hIndex);
+	func_names.push_back("test_hIndex");
 	test_cases.push_back(test_getSkyline);
 	func_names.push_back("test_getSkyline");
 	while(true) {

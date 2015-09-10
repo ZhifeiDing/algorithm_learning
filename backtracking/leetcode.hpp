@@ -47,5 +47,8 @@ void test_WordDictionary();
 
 vector<string> findWords(vector<vector<char>>& board, vector<string>& words);
 void test_findWords();
+
+int threeSumClosest(vector<int> & nums, int target);
+void test_threeSumClosest();
 #endif
 

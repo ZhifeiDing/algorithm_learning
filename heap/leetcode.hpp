@@ -51,5 +51,13 @@ void test_getSkyline();
 int findKthLargest(vector<int> & nums, int k);
 void test_findKthLargest();
 int findKthLargest_minHeap(vector<int> & nums, int k);
+
+int hIndex_heap(vector<int> & citations);
+int hIndex(vector<int> & citations);
+void test_hIndex();
+int hIndex_bucksort(vector<int> & citations);
+
+int hIndexII(vector<int>& citations);
+void test_hIndexII();
 #endif
 

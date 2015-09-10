@@ -118,5 +118,8 @@ void test_numberToWords();
 
 bool isPalindrome(int x);
 void test_isPalindrome();
+
+double myPow(double x, int n);
+void test_myPow();
 #endif
 

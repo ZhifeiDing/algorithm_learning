@@ -44,5 +44,8 @@ void test_Queue();
 
 vector<int> maxSlidingWindow(vector<int>& nums, int k);
 void test_maxSlidingWindow();
+
+int hIndex(vector<int> & citations);
+void test_hIndex();
 #endif
 

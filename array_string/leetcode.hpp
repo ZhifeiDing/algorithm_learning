@@ -120,5 +120,8 @@ void test_findMedianSortedArrays();
 
 string convert(string s, int numRows);
 void test_convert();
+
+int firstBadVersion(int n);
+void test_firstBadVersion();
 #endif
 
