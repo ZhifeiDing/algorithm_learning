@@ -53,3 +53,31 @@ vector<vector<int>> threeSum(vector<int>& nums) {
     threeSumHelper(nums, r, s, 0, 0, get);
     return r;
 }
+
+// O(n^2) -- two pointers solution
+vector<vector<int>> threeSum_twoPointers(vector<int>& nums) {
+    vector<vector<int> > r;
+    if( nums.size() < 3 )
+      return r;
+    sort(nums.begin(), nums.end());
+    int i = 0;
+    while(i < nums.size()-2 && nums[i] <= 0) {
+        int j = i + 1, k = nums.size() -1;
+        while( j < k ) {
+            int s = nums[i] + nums[j] + nums[k];
+            if( s == 0 ) {
+                vector<int> t;
+                t.push_back(nums[i]);
+                t.push_back(nums[j]);
+                t.push_back(nums[k]);
+                r.push_back(t);
+            }
+            if( s < 0 )
+                while( j < k && nums[j] == nums[++j] );
+            else
+                while( j < k && nums[k] == nums[--k] );
+        }
+        while( i < nums.size() -2 && nums[i] == nums[++i]);
+    }
+    return r;
+}

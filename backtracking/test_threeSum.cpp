@@ -11,5 +11,13 @@ void test_threeSum(void) {
     cout << endl;
   }
   cout << endl;
+
+  r = threeSum_twoPointers(nums);
+  for(int i = 0; i < r.size(); i++) {
+    for(int j = 0; j < r[i].size(); j++)
+      cout << r[i][j] << "\t";
+    cout << endl;
+  }
+  cout << endl;
 }
 
