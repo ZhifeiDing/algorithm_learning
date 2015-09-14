@@ -51,5 +51,8 @@ void test_findWords();
 
 int threeSumClosest(vector<int> & nums, int target);
 void test_threeSumClosest();
+
+int numIslands(vector<vector<char>>& grid);
+void test_numIslands();
 #endif
 

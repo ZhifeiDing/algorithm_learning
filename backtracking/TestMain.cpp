@@ -7,18 +7,20 @@ typedef void (*func)(void);
 int main() {
 	vector<func> test_cases;
 	vector<string> func_names;
+	test_cases.push_back(test_numIslands);
+	func_names.push_back("test_numIslands");
 	test_cases.push_back(test_threeSum);
 	func_names.push_back("test_threeSum");
 	test_cases.push_back(test_threeSumClosest);
 	func_names.push_back("test_threeSumClosest");
 	test_cases.push_back(test_findWords);
 	func_names.push_back("test_findWords");
-	test_cases.push_back(test_combinationSum);
-	func_names.push_back("test_combinationSum");
 	test_cases.push_back(test_WordDictionary);
 	func_names.push_back("test_WordDictionary");
 	test_cases.push_back(test_combinationSum3);
 	func_names.push_back("test_combinationSum3");
+	test_cases.push_back(test_combinationSum);
+	func_names.push_back("test_combinationSum");
 	while(true) {
 		char select;
 		cout << "Please choose a case:" << endl;
