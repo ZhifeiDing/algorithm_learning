@@ -64,5 +64,8 @@ vector<int> diffWaysToCompute_DP(string input);
 
 string shortestPalindrome(string s);
 void test_shortestPalindrome();
+
+int numSquares(int n);
+void test_numSquares();
 #endif
 
