@@ -54,5 +54,6 @@ void test_threeSumClosest();
 
 int numIslands(vector<vector<char>>& grid);
 void test_numIslands();
+int numIslands_uf(vector<vector<char> > & grid);
 #endif
 

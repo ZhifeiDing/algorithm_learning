@@ -13,5 +13,6 @@ void test_numIslands() {
     cout << endl;
   }
   cout << endl;
+  cout << "number of islands = " << numIslands_uf(grid) << endl;
   cout << "number of islands = " << numIslands(grid) << endl;
 }
