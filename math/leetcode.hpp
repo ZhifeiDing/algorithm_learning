@@ -121,5 +121,8 @@ void test_isPalindrome();
 
 double myPow(double x, int n);
 void test_myPow();
+
+int mySqrt(int x);
+void test_mySqrt();
 #endif
 
