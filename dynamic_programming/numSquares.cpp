@@ -20,3 +20,4 @@ int numSquares(int n) {
   }
   return numPerfectSquares.back();
 }
+

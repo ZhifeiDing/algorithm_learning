@@ -123,5 +123,8 @@ void test_convert();
 
 int firstBadVersion(int n);
 void test_firstBadVersion();
+
+string largestNumber(vector<int> & nums);
+void test_largestNumber();
 #endif
 
