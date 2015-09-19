@@ -126,5 +126,8 @@ void test_firstBadVersion();
 
 string largestNumber(vector<int> & nums);
 void test_largestNumber();
+
+void moveZeroes(vector<int>& nums);
+void test_moveZeroes();
 #endif
 
