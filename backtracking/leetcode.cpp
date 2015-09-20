@@ -8,7 +8,8 @@ void gen_array(int n, vector<int> & data, int base, bool positive) {
   }
 }
 
-void print_array(vector<int> & data) {
+void print_array(vector<int> & data, const string  s) {
+  cout << s << " : ";
   for(int i = 0; i < data.size(); i++)
     cout << data[i] << " ";
   cout << endl;

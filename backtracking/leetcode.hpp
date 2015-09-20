@@ -19,7 +19,7 @@
 using namespace std;
 
 void gen_array(int n, vector<int> & data, int base = 97, bool positive = true);
-void print_array(vector<int> & data);
+void print_array(vector<int> & data, const string s = "Data");
 void gen_string(string & s, int n , bool strict );
 void print_string(string & s);
 
@@ -55,5 +55,11 @@ void test_threeSumClosest();
 int numIslands(vector<vector<char>>& grid);
 void test_numIslands();
 int numIslands_uf(vector<vector<char> > & grid);
+
+vector<vector<int>> subsetsWithDup(vector<int>& nums);
+void test_subsetsWithDup();
+
+vector<string> restoreIpAddresses(string s);
+void test_restoreIpAddresses();
 #endif
 
