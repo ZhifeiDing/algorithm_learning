@@ -58,6 +58,7 @@ int numIslands_uf(vector<vector<char> > & grid);
 
 vector<vector<int>> subsetsWithDup(vector<int>& nums);
 void test_subsetsWithDup();
+vector<vector<int>> subsetsWithDup_linear(vector<int>& nums);
 
 vector<string> restoreIpAddresses(string s);
 void test_restoreIpAddresses();
