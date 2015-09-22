@@ -47,5 +47,11 @@ void test_maxSlidingWindow();
 
 int hIndex(vector<int> & citations);
 void test_hIndex();
+
+int evalRPN(vector<string>& tokens);
+void test_evalRPN();
+
+string simplifyPath(string path);
+void test_simplifyPath();
 #endif
 
