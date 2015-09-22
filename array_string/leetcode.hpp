@@ -129,5 +129,8 @@ void test_largestNumber();
 
 void moveZeroes(vector<int>& nums);
 void test_moveZeroes();
+
+int firstMissingPositive(vector<int>& nums);
+void test_firstMissingPositive();
 #endif
 
