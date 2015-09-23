@@ -67,5 +67,8 @@ void test_shortestPalindrome();
 
 int numSquares(int n);
 void test_numSquares();
+
+int longestValidParentheses(string s);
+void test_longestValidParentheses();
 #endif
 
