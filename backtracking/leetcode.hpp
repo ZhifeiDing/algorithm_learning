@@ -62,5 +62,11 @@ vector<vector<int>> subsetsWithDup_linear(vector<int>& nums);
 
 vector<string> restoreIpAddresses(string s);
 void test_restoreIpAddresses();
+
+vector<string> addOperators(string num, int target);
+void test_addOperators();
+
+vector<string> letterCombinations(string digits);
+void test_letterCombinations();
 #endif
 
