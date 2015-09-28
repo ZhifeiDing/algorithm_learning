@@ -68,5 +68,8 @@ void test_addOperators();
 
 vector<string> letterCombinations(string digits);
 void test_letterCombinations();
+
+vector<string> generateParenthesis(int n);
+void test_generateParenthesis();
 #endif
 
