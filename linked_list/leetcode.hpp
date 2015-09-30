@@ -91,5 +91,8 @@ void test_reorderList();
 
 ListNode *detectCycle(ListNode *head);
 void test_detectCycle();
+
+int findDuplicate(vector<int> & nums);
+void test_findDuplicate();
 #endif
 
