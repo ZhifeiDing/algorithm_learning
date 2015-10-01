@@ -94,5 +94,9 @@ void test_detectCycle();
 
 int findDuplicate(vector<int> & nums);
 void test_findDuplicate();
+int findDuplicate_bs(vector<int> & nums);
+
+ListNode *getIntersectionNode(ListNode *headA, ListNode *headB);
+void test_getIntersectionNode();
 #endif
 
