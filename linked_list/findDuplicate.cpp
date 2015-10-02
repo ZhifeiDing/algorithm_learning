@@ -29,3 +29,25 @@ int findDuplicate(vector<int> & nums) {
   }
   return slow;
 }
+
+// binary search O(logn)
+int cntRanges(vector<int> & nums, int l, int r) {
+  int cnt = 0;
+  for(auto i : nums ) {
+    if( i <= r && l <= i )
+      ++cnt;
+  }
+  return cnt;
+}
+int findDuplicate_bs(vector<int> & nums) {
+  int l = 1, r = nums.size();
+  while( l < r ) {
+    int m = l + ( r - l ) / 2;
+    int cnt = cntRanges(nums, l, m);
+    if( cnt > m -l + 1 )
+      r = m;
+    else
+      l = m + 1;
+  }
+  return l;
+}

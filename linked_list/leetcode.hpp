@@ -98,5 +98,6 @@ int findDuplicate_bs(vector<int> & nums);
 
 ListNode *getIntersectionNode(ListNode *headA, ListNode *headB);
 void test_getIntersectionNode();
+ListNode *getIntersectionNode_2nd(ListNode *headA, ListNode *headB);
 #endif
 

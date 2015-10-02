@@ -10,5 +10,6 @@ void test_findDuplicate() {
   print_array(nums);
   int r = findDuplicate(nums);
   cout << "duplicate = " << r << endl;
+  cout << "duplicate = " << findDuplicate_bs(nums) << endl;
 }
 
