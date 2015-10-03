@@ -29,3 +29,33 @@ int longestValidParentheses(string s) {
   }
   return longest;
 }
+
+// two pass method
+int longestValidParentheses_twopass(string s) {
+  // just treat '(' as 1 and ')' as -1 so what we do is to find the largest number which sum to 0
+  int sum = 0, maxCnt = 0, cnt = 0;
+
+  for(auto i : s) {
+    sum += i == '(' ? 1 : -1;
+    if( sum == 0 ) {
+      cnt += 2;
+      maxCnt = max(maxCnt, cnt);
+    } else if( -1 == sum ) {
+      cnt = 0;
+      sum = 0;
+    }
+  }
+  sum = 0;
+  cnt = 0;
+  for(int i = s.size()-1; 0 <= i; --i) {
+    sum += i == '(' ? 1 : -1;
+    if( sum == 0 ) {
+      cnt += 2;
+      maxCnt = max(maxCnt, cnt);
+    } else if( 1 == sum ) {
+      cnt = 0;
+      sum = 0;
+    }
+  }
+  return maxCnt;
+}

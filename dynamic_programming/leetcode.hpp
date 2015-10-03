@@ -70,5 +70,6 @@ void test_numSquares();
 
 int longestValidParentheses(string s);
 void test_longestValidParentheses();
+int longestValidParentheses_twopass(string s);
 #endif
 
