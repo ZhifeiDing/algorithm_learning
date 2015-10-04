@@ -31,3 +31,29 @@ ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
   }
   return a;
 }
+
+// first get the length of two list then match them by the shorter list
+int getLenOfList(ListNode *head) {
+  if( head == NULL ) 
+    return 0;
+  return 1 + getLenOfList(head->next);
+}
+
+ListNode *getIntersectionNode_2nd(ListNode *headA, ListNode *headB) {
+
+  int lenA = getLenOfList(headA);
+  int lenB = getLenOfList(headB);
+
+  ListNode *a = headA, *b = headB;
+  for(int i = 0; i < lenA - lenB; ++i)
+    a = a->next;
+  for(int i = 0; i < lenB - lenA; ++i)
+    b = b->next;
+
+  while( a != b ) {
+    a = a->next;
+    b = b->next;
+  }
+
+  return a;
+}

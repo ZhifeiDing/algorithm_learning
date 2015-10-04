@@ -10,4 +10,5 @@ void test_getIntersectionNode() {
   print_list(headA);
   print_list(headB);
   cout << "intersection node = " << getIntersectionNode(headA, headB)->val << endl;
+  cout << "intersection node = " << getIntersectionNode_2nd(headA, headB)->val << endl;
 }
