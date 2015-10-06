@@ -16,3 +16,5 @@
 ## tree
 ## greedy
 ## stack_queue
+  * implement data structure
+  * using stack/queue to solve problems
