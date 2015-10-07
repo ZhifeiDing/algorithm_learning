@@ -14,6 +14,7 @@
  */
 
 // use the index as pointers to find the intersection point
+// O(n)
 int findDuplicate(vector<int> & nums) {
   int fast = nums.size();
   int slow = nums.size();
@@ -50,4 +51,22 @@ int findDuplicate_bs(vector<int> & nums) {
       l = m + 1;
   }
   return l;
+}
+
+// count the number of bit 1 from 1 to n
+int findDuplicate_bit(vector<int> & nums) {
+  vector<int> cntCompleteBit(32,0);
+  for(int i = 1; i < nums.size(); ++i) {
+    for(int j = 0; j < cntCompleteBit.size(); ++j)
+      cntCompleteBit[j] += ( i & ( 1 << j ) );
+  }
+  vector<int> cntBit(32,0);
+  for(int i = 0; i < nums.size(); ++i) {
+    for(int j = 0; j < cntBit.size(); ++j)
+      cntBit[j] += ( nums[i] & ( 1 << j ) );
+  }
+  int r = 0;
+  for(int i = 0; i < cntBit.size(); ++i)
+    r += cntCompleteBit[i] < cntBit[i] ? 1 << i : 0;
+  return r;
 }

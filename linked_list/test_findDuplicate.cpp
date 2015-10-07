@@ -11,5 +11,6 @@ void test_findDuplicate() {
   int r = findDuplicate(nums);
   cout << "duplicate = " << r << endl;
   cout << "duplicate = " << findDuplicate_bs(nums) << endl;
+  cout << "duplicate = " << findDuplicate_bit(nums) << endl;
 }
 
