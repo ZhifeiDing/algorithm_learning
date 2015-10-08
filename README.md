@@ -13,6 +13,8 @@
   * the key point in linked list problem is to record or find the pre and post list node where you will perform the disjoint or joint operation
 
 ## dynamic programming
+  * problems that can be solved with dynamic programming
+
 ## tree
 ## greedy
 ## stack_queue
