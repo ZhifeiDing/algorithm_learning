@@ -132,5 +132,8 @@ void test_moveZeroes();
 
 int firstMissingPositive(vector<int>& nums);
 void test_firstMissingPositive();
+
+bool wordPattern(string pattern, string str);
+void test_wordPattern();
 #endif
 

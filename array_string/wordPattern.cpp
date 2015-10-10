@@ -31,13 +31,18 @@ bool wordPattern(string pattern, string str) {
     vector<string> words;
     split(str, " ", words);
     unordered_map<char, string> c2s;
+    unordered_set<string> s;
     
     if( words.size() != pattern.size() )
         return false;
     for(int i = 0; i < words.size(); ++i) {
-        if( c2s.find(pattern[i]) == c2s.end() )
-            c2s[pattern[i]] = words[i];
-        else if( c2s[pattern[i]] != words[i] )
+        if( c2s.find(pattern[i]) == c2s.end() ) {
+          if( s.find(words[i]) != s.end() )
+            return false;
+
+          s.insert(words[i]);
+          c2s[pattern[i]] = words[i];
+        } else if( c2s[pattern[i]] != words[i] )
             return false;
     }
     return true;
