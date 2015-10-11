@@ -135,5 +135,6 @@ void test_firstMissingPositive();
 
 bool wordPattern(string pattern, string str);
 void test_wordPattern();
+bool wordPattern_stringstream(string pattern, string str);
 #endif
 

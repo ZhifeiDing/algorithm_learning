@@ -48,3 +48,23 @@ bool wordPattern(string pattern, string str) {
     return true;
 }
 
+// solution with stringstream
+bool wordPattern_stringstream(string pattern, string str) {
+  unordered_map<char, string> c2s;
+  unordered_set<string> s;
+  istringstream ss(str);
+  for(int i = 0; i < pattern.size(); ++i) {
+    ss >> str;
+    if( c2s.find(pattern[i]) == c2s.end() ) {
+      if( s.find(str) != s.end() )
+        return false;
+      s.insert(str);
+      c2s[pattern[i]] = str;
+    } else if( c2s[pattern[i]] != str )
+      return false;
+  }
+  if( !ss.eof() )
+    return false;
+
+  return true;
+}
