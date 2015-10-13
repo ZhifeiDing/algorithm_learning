@@ -8,17 +8,16 @@
 vector<int> plusOne(vector<int>& digits) {
     if( digits.size() == 0 )
         return digits;
-    vector<int> r(digits.size()+1);
+    vector<int> r(digits);
     int next = 1;
     for(int i = digits.size() - 1; 0 <= i; --i) {
-        int val = digits[i] + next;
-        next = val / 10;
-        r[i+1] = val % 10;
+      if( r[i] < 9 ) {
+        ++r[i];
+        break;
+      }
+      r[i] = 0;
     }
-    if( next ) {
-        r[0] = next;
-        return r;
-    } else {
-        return vector<int>(r[1], r[digits.size()]);
-    }
+    if( r[0] == 0 )
+      r.insert(r.begin(),1);
+    return r;
 }

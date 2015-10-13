@@ -100,5 +100,11 @@ int findDuplicate_bit(vector<int> & nums);
 ListNode *getIntersectionNode(ListNode *headA, ListNode *headB);
 void test_getIntersectionNode();
 ListNode *getIntersectionNode_2nd(ListNode *headA, ListNode *headB);
+
+vector<int> plusOne(vector<int>& digits);
+void test_plusOne();
+
+string addBinary(string a, string b);
+void test_addBinary();
 #endif
 
