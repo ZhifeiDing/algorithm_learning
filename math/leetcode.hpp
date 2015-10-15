@@ -124,5 +124,8 @@ void test_myPow();
 
 int mySqrt(int x);
 void test_mySqrt();
+
+bool canWinNim(int n);
+void test_canWinNim();
 #endif
 
