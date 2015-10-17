@@ -71,5 +71,8 @@ void test_letterCombinations();
 
 vector<string> generateParenthesis(int n);
 void test_generateParenthesis();
+
+void gameOfLife(vector<vector<int> > &board);
+void test_gameOfLife();
 #endif
 
