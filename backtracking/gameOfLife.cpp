@@ -31,10 +31,17 @@
  * these problems?
  */
 
+int alive(vector<vector<int> > &board, int i, int j) {
+  if( i < 0 || board.size() <= i || j < 0 || board[0].size() <= j )
+    return 0;
+  if( board[i][j] == 1 || board[i][j] == 2 )
+    return 1;
+  return 0;
+}
+
 int countAlive(vector<vector<int> > &board, int i, int j) {
-  return ( board[i+1][j] == 1 ) + ( board[i+1][j+1] == 1 ) + ( board[i+1][j-1] == 1 ) + 
-    ( board[i][j-1] == 1 ) + ( board[i][j+1] == 1 ) + ( board[i-1][j] == 1 ) +
-    ( board[i-1][j-1] == 1 ) + ( board[i-1][j+1] == 1 );
+  return alive(board, i+1, j) + alive(board, i+1, j+1) + alive(board, i+1, j-1) + alive(board, i, j+1)
+    + alive(board, i, j-1) + alive(board, i-1, j) + alive(board,i-1,j-1) + alive(board, i-1, j+1);
 }
 
 void gameOfLife(vector<vector<int> > &board) {

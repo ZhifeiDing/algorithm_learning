@@ -6,7 +6,7 @@ void test_gameOfLife() {
   int n = rand()%10;
   vector<vector<int> > board(m);
   for(int i = 0; i < m; ++i)
-    gen_array(n, board[i],2);
+    gen_array(n, board[i],2, false);
 
   for(int i = 0; i < m; ++i)
     print_array(board[i]);
