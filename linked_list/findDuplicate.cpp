@@ -15,13 +15,16 @@
 
 // use the index as pointers to find the intersection point
 // O(n)
+//using Tortoise & Hair algorithm by Donald Knuth to find cycle in a sequence.
+//This algorithm also called Floyd's cycele detection algorithm
+//
 int findDuplicate(vector<int> & nums) {
   int fast = nums.size();
   int slow = nums.size();
 
   do {
     slow = nums[slow-1];
-    fast = nums[fast-1];
+    fast = nums[nums[fast-1]-1];
   } while( slow != fast );
   slow = nums.size();
   while( slow != fast ) {
