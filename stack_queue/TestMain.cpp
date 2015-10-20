@@ -7,16 +7,18 @@ typedef void (*func)(void);
 int main() {
 	vector<func> test_cases;
 	vector<string> func_names;
+	test_cases.push_back(test_ValidWordAbbr);
+	func_names.push_back("test_ValidWordAbbr");
 	test_cases.push_back(test_simplifyPath);
 	func_names.push_back("test_simplifyPath");
+	test_cases.push_back(test_maxSlidingWindow);
+	func_names.push_back("test_maxSlidingWindow");
 	test_cases.push_back(test_Stack);
 	func_names.push_back("test_Stack");
 	test_cases.push_back(test_evalRPN);
 	func_names.push_back("test_evalRPN");
 	test_cases.push_back(test_Queue);
 	func_names.push_back("test_Queue");
-	test_cases.push_back(test_maxSlidingWindow);
-	func_names.push_back("test_maxSlidingWindow");
 	test_cases.push_back(test_MinStack);
 	func_names.push_back("test_MinStack");
 	while(true) {

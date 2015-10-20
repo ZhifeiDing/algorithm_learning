@@ -53,5 +53,7 @@ void test_evalRPN();
 
 string simplifyPath(string path);
 void test_simplifyPath();
+
+void test_ValidWordAbbr();
 #endif
 
