@@ -74,5 +74,8 @@ void test_generateParenthesis();
 
 void gameOfLife(vector<vector<int> > &board);
 void test_gameOfLife();
+
+void setZeroes(vector<vector<int>>& matrix);
+void test_setZeroes();
 #endif
 
