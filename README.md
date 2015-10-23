@@ -1,4 +1,8 @@
-# algorithm_learning
+====================
+Algorithms with C++
+====================
+
+# algorithm learning
   * algorithm learning and implementation in C++
   * All problems are from leetcode . And all the solutions are AC on leetcode.
 
@@ -16,7 +20,12 @@
   * problems that can be solved with dynamic programming
 
 ## tree
+  * take advantage of binary search tree , red-black tree, etc.
+  * implement abstract tree structure
+
 ## greedy
-## stack_queue
+  * solve problems using greedy method
+
+## stack queue
   * implement data structure
   * using stack/queue to solve problems
