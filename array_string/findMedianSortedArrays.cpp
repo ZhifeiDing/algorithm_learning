@@ -35,3 +35,7 @@ double findMedianSortedArrays(vector<int> & nums1, vector<int> & nums2) {
   int len = nums1.size() + nums2.size();
   return findKthElement(nums1, nums2, ( len + 1 ) / 2, len % 2 == 0);
 }
+
+double findMedianSortedArrays_BS(vector<int> & nums1, vector<int> & nums2) {
+
+}
