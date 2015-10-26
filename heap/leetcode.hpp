@@ -59,5 +59,7 @@ int hIndex_bucksort(vector<int> & citations);
 
 int hIndexII(vector<int>& citations);
 void test_hIndexII();
+
+void test_MedianFinder();
 #endif
 
