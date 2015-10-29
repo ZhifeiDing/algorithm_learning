@@ -5,6 +5,7 @@ Algorithms with C++
 # algorithm learning
   * algorithm learning and implementation in C++
   * All problems are from leetcode . And all the solutions are AC on leetcode.
+  * Some problems are solved with one-more solutions
 
 ## array and string 
   * This category contains problems related with array and string operation
