@@ -43,28 +43,21 @@ public:
     // Encodes a tree to a single string.
     string serialize(TreeNode* root) {
         if( root == NULL )
-            return "N";
-        return ( root->val + '0' ) + serialize(root->left) + serialize(root->right);
+            return "#";
+        return to_string(root->val) + "," + serialize(root->left) + "," + serialize(root->right);
     }
 
     // Decodes your encoded data to tree.
     TreeNode* deserialize(string data) {
-        if( data.size() == 0 || data[0] == "N" )
+        if( data.size() == 0 || data[0] == "#" )
           return (TreeNode*)NULL;
-        TreeNode root(data[0] - '0');
+        stringstream ss(data);
+        string s;
+        getline(ss, s, ",");
+        TreeNode root(stoi(s));
         TreeNode *p = &root;
-        int i = 1;
-        while( i < data.size()) {
-          if( data[i] == "N" ) {
-            p = p->right;
-            
-            if( data[i+1] == "N" )
-
-          } else {
-            p = p->left;
-          }
-        }
         
+
         return &root;
 
     }
