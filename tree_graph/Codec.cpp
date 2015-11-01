@@ -56,7 +56,29 @@ public:
         getline(ss, s, ",");
         TreeNode root(stoi(s));
         TreeNode *p = &root;
-        
+
+        stack<TreeNode*> q;
+        q.push(p);
+      
+        while( !q.empty() ) {
+          p = q.top();
+          q.pop();
+
+          if( !getline(ss, s, ",") )
+            break;
+          if( s != "#" ) {
+            p->left = new TreeNode(stoi(s));
+            q.push(p->left);
+          } else {
+            if( !getline(ss,s,",") )
+              break;
+            if( s != "#" ) {
+              p->right = new TreeNode(stoi(s));
+              q.push(r);
+              q.push(p->right);
+            }
+          }
+        }
 
         return &root;
 

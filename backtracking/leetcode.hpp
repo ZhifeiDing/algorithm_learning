@@ -77,5 +77,8 @@ void test_gameOfLife();
 
 void setZeroes(vector<vector<int>>& matrix);
 void test_setZeroes();
+
+vector<vector<int> > fourSum(vector<int>& nums, int target);
+void test_fourSum();
 #endif
 
