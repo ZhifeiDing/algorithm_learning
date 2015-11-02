@@ -85,6 +85,44 @@ public:
     }
 };
 
+class Codec_level {
+public:
+    string serialize(TreeNode* root) {
+
+        /* for example, tree[1,2] results in: [[2]1[N]] */
+
+        return root ? "["+serialize(root->left)+to_string(root->val)+serialize(root->right)+"]" : "[N]";
+    }
+
+    TreeNode* deserialize(string data) {
+        if (data=="[N]") return NULL;
+
+        /* for example above: [[2]1[N]], after while loops below, a=3, the index of ']' matching secnod '[',
+         b=5, the index of [ matching ']' at len-2 */
+
+        int len=data.length(), a, b, s=1, k=2;
+        while (1) {
+            if (data[k]=='[') s++;
+            if (data[k]==']') s--;
+            if (s==0) { a=k; break; }
+            k++;
+        }
+
+        k=len-3, s=1;
+        while (1) {
+            if (data[k]=='[') s--;
+            if (data[k]==']') s++;
+            if (s==0) { b=k; break; }
+            k--;
+        }
+
+        TreeNode *head = new TreeNode(atoi(data.substr(a+1, b-a-1).c_str()));
+        head->left = deserialize(data.substr(1, a));
+        head->right = deserialize(data.substr(b, len-2-b+1));
+        return head;
+    }
+};
+
 // Your Codec object will be instantiated and called as such:
 // Codec codec;
 // codec.deserialize(codec.serialize(root));
