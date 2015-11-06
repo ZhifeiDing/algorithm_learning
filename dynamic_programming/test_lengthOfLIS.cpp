@@ -7,4 +7,5 @@ void test_lengthOfLIS() {
   gen_array(n, nums);
   print_array(nums);
   cout << "length of LIS = " << lengthOfLIS(nums) << endl;
+  cout << "length of LIS = " << lengthOfLIS_lowerbound(nums) << endl;
 }

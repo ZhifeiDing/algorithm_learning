@@ -34,3 +34,21 @@ int lengthOfLIS(vector<int> &nums) {
   }
   return f.back();
 }
+
+/*
+ * lower_bound
+ */
+int lengthOfLIS_lowerbound(vector<int> &nums) {
+  if( nums.size() == 0 )
+    return 0;
+  vector<int> r(1,nums[0]);
+  for(int i = 1; i < nums.size(); ++i) {
+    if( r.back() <= nums[i] )
+      r.push_back(nums[i]);
+    else {
+      auto itr = lower_bound(r.beign(), r.end(), nums[i]);
+      *itr = nums[i];
+    }
+  }
+  return r.size();
+}
