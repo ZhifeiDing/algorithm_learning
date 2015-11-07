@@ -74,5 +74,6 @@ int longestValidParentheses_twopass(string s);
 
 int lengthOfLIS(vector<int> &nums);
 void test_lengthOfLIS();
+int lengthOfLIS_lowerbound(vector<int> &nums);
 #endif
 
