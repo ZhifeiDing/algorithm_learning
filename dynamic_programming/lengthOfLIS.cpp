@@ -43,7 +43,7 @@ int lengthOfLIS_lowerbound(vector<int> &nums) {
     return 0;
   vector<int> r(1,nums[0]);
   for(int i = 1; i < nums.size(); ++i) {
-    if( r.back() <= nums[i] )
+    if( r.back() < nums[i] )
       r.push_back(nums[i]);
     else {
       auto itr = lower_bound(r.begin(), r.end(), nums[i]);
@@ -75,7 +75,7 @@ int lengthOfLIS_bs(vector<int> &nums) {
     return 0;
   vector<int> r(1, nums[0]);
   for(int i = 1; i < nums.size(); ++i) {
-    if( r.back() <= nums[i] )
+    if( r.back() < nums[i] )
       r.push_back(nums[i]);
     else 
       r[binarySearch(r, 0, r.size()-1, nums[i])] = nums[i];
