@@ -127,5 +127,9 @@ void test_mySqrt();
 
 bool canWinNim(int n);
 void test_canWinNim();
+
+int divide(int dividend, int divisor);
+void test_divide();
+int divide_bs(int dividend, int divisor);
 #endif
 
