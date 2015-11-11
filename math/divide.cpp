@@ -46,7 +46,7 @@ int divide_bs(int dividend, int divisor) {
     divisor = divisor < 0 ? divisor : -1 * divisor;
     
     cout << "dividend = " << dividend << " , divisor = " << divisor << endl;
-    int d = divisor;
+    long int d = divisor;
     while( d >= dividend ) {
         ++r;
         d = d << 1;
