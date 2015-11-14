@@ -15,3 +15,17 @@
  * There are many calls to sumRange function.
  */
 
+class NumArray {
+  public:
+        NumArray(vector<int> &nums) {
+          data.push_back(0);
+          for(auto itr : nums) {
+            data.push_back(data.back() + itr);
+          }
+        }
+        int sumRange(int i, int j) {
+          return data[j+1] - data[i]; 
+        }
+  private:
+       vector<int> data;
+};
