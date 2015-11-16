@@ -1,7 +1,7 @@
 #include "leetcode.hpp"
 
 void gen_array(int n, vector<int> & data, int base) {
-  srand((unsigned int)time(NULL));
+  //srand((unsigned int)time(NULL));
   for(int i = 0; i < n; i++)
     data.push_back( rand() % base );
 }

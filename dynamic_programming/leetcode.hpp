@@ -76,5 +76,8 @@ int lengthOfLIS(vector<int> &nums);
 void test_lengthOfLIS();
 int lengthOfLIS_lowerbound(vector<int> &nums);
 int lengthOfLIS_bs(vector<int> &nums);
+
+void test_NumArray();
+void test_NumMatrix();
 #endif
 
