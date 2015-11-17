@@ -80,5 +80,8 @@ void test_setZeroes();
 
 vector<vector<int> > fourSum(vector<int>& nums, int target);
 void test_fourSum();
+
+vector<string> removeInvalidParentheses(string s);
+void test_removeInvalidParentheses();
 #endif
 
