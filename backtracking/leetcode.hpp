@@ -83,5 +83,8 @@ void test_fourSum();
 
 vector<string> removeInvalidParentheses(string s);
 void test_removeInvalidParentheses();
+
+bool isAdditiveNumber(string num);
+void test_isAdditiveNumber();
 #endif
 
