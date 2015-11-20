@@ -43,37 +43,36 @@ string stringAdd(string num1, string num2) {
         add = acc / 10;
     }
     if( add )
-        r.push_back(add);
+        r.push_back(add+'0');
+    reverse(r.begin(), r.end());
     return r;
 }
 
-bool isAdditiveNumberHelper(string num1, string num) {
-    int i = num1.size();
-    for(int j = 1; j < num.size() - i; ++j) {
-            string num2 = num.substr(0, j);
-            if( num2.size() > 1 && num2[0] == '0' )
-                break;
-            string res = stringAdd(num1, num2);
-            if( res.size() + j > num.size() )
-                break;
-            if( res == num.substr(j, res.size()) )
-                if( res.size() + j == num.size() )
-                    return true;
-                else
-                    if( isAdditiveNumberHelper(res, num.substr(j + res.size())) )
-                        return true;
-    }
-    return false;
+bool isAdditiveNumberHelper(string num1, string num2, string num) {
+     string res = stringAdd(num1, num2);
+     if( res.size() > num.size() )
+         return false;
+     if( res == num.substr(0, res.size()) )
+         if( res.size() == num.size() )
+             return true;
+         else
+             return isAdditiveNumberHelper(num2,res, num.substr(res.size()));
+     return false;
 }
 
 bool isAdditiveNumber(string num) {
 
-    for(int i = 1; i < num.size() / 2; ++i) {
+    for(int i = 1; i < num.size() / 2 + 1; ++i) {
         string num1 = num.substr(0,i);
         if( num1.size() > 1 && num1[0] == '0' )
             break;
-        if( isAdditiveNumberHelper(num1, num.substr(i)) )
-            return true;
+        for(int j = i + 1; j < num.size(); ++j) {
+          string num2 = num.substr(i, j-i);
+          if( num2.size() > 1 && num2[0] == '0' )
+              break;
+          if( isAdditiveNumberHelper(num1, num2, num.substr(j)) )
+              return true;
+        }
     }
     return false;
 }

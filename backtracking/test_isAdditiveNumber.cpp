@@ -7,6 +7,9 @@ void test_isAdditiveNumber() {
   num = "199100199"; // true
   cout << num << ( isAdditiveNumber(num) ? " is additive number" : " is not additive number" ) << endl;
 
+  num = "123"; // true
+  cout << num << ( isAdditiveNumber(num) ? " is additive number" : " is not additive number" ) << endl;
+
   num = to_string(rand()); // random
   cout << num << ( isAdditiveNumber(num) ? " is additive number" : " is not additive number" ) << endl;
 }
