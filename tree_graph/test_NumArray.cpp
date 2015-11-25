@@ -21,19 +21,22 @@ void test_NumArray() {
     print_array(nums);
     cout << "Sum(" << i << " , " << j << ") = " << numArray.sumRange(i,j) << endl;
   }
+  cout << endl;
+  print_array(nums);
+  cout << endl;
   cout << "Binary Index Tree: " << endl;
   m = rand()%5+1;
-  NumArray_BIT numArray(nums);
+  NumArray_BIT numArray_bit(nums);
   while( --m ) {
     int i = rand()%n;
     int j = i + rand()%(n-i);
-    cout << "Sum(" << i << " , " << j << ") = " << numArray.sumRange(i,j) << endl;
+    cout << "Sum(" << i << " , " << j << ") = " << numArray_bit.sumRange(i,j) << endl;
 
     int val = rand()%100;
     nums[i] = val;
-    numArray.update(i,val);
+    numArray_bit.update(i,val);
     cout << "Modify nums : ";
     print_array(nums);
-    cout << "Sum(" << i << " , " << j << ") = " << numArray.sumRange(i,j) << endl;
+    cout << "Sum(" << i << " , " << j << ") = " << numArray_bit.sumRange(i,j) << endl;
   }
 }

@@ -114,7 +114,7 @@ private:
         return res;
     }
 public:
-    NumArray(vector<int> &nums) {
+    NumArray_BIT(vector<int> &nums) {
         nSize = nums.size();
         num = BITsum = vector<int>(nSize+1, 0);
         for(int i=0;i<nSize; ++i)
