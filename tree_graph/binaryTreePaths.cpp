@@ -23,6 +23,7 @@ vector<string> binaryTreePaths(TreeNode* root) {
     st.push(root);
     while( !st.empty() ) {
       root = st.top();
+      string s;
       s.append(to_string(root->val));
       st.pop();
       if( root->right == NULL && root->left == NULL ) {

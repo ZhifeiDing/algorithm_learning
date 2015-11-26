@@ -69,5 +69,7 @@ vector<string> binaryTreePaths_recursive(TreeNode* root);
 void test_binaryTreePaths();
 
 vector<string> binaryTreePaths_recursive2(TreeNode* root);
+
+void test_NumArray();
 #endif
 
