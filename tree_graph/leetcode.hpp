@@ -9,6 +9,7 @@
 #include<ctime>
 #include<utility>
 #include<unordered_map>
+#include<unordered_set>
 #include<algorithm>
 #include<bitset>
 #include<sstream>
@@ -71,5 +72,8 @@ void test_binaryTreePaths();
 vector<string> binaryTreePaths_recursive2(TreeNode* root);
 
 void test_NumArray();
+
+vector<int> findMinHeightTrees(int n, vector<pair<int, int> > edges);
+void test_findMinHeightTrees();
 #endif
 
