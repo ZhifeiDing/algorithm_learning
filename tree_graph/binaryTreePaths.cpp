@@ -14,34 +14,6 @@
  * 
  * ["1->2->5", "1->3"]
  */
-vector<string> binaryTreePaths(TreeNode* root) {
-    vector<string> r;
-    if( root == NULL )
-      return r;
-    vector<int> num;
-    stack<TreeNode*> st;
-    st.push(root);
-    while( !st.empty() ) {
-      root = st.top();
-      string s;
-      s.append(to_string(root->val));
-      st.pop();
-      if( root->right == NULL && root->left == NULL ) {
-        r.push_back(s);
-        s.pop_back();
-        if( s.back() == '-' )
-          s.pop_back();
-      } else {
-        s.append("->");
-        if( root->right != NULL ) {
-          st.push(root->right);
-        }
-        if( root->left != NULL )
-          st.push(root->left);
-      }
-    }
-    return r;
-}
 
 void binaryTreePathsHelper(TreeNode* root, vector<string> & r, string & s) {
   s.append(to_string(root->val));
