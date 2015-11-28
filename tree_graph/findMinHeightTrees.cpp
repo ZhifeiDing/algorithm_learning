@@ -63,7 +63,7 @@ vector<int> findMinHeightTrees(int n, vector<pair<int, int> > edges) {
   // build the leaves list
   vector<int> leaves;
   for(int i = 0; i < adj.size(); ++i) {
-    if( adj[i].size() == 1 )
+    if( adj[i].size() < 2 )
       leaves.push_back(i);
   }
 
