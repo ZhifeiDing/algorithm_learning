@@ -79,5 +79,8 @@ int lengthOfLIS_bs(vector<int> &nums);
 
 void test_NumArray();
 void test_NumMatrix();
+
+int maxProfitII(vector<int> & prices);
+void test_maxProfitII();
 #endif
 
