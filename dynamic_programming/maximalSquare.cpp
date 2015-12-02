@@ -13,36 +13,19 @@
  */
 
 int maximalSquare(vector<vector<char> > & matrix) {
-  int m=matrix.size();
-  if (m==0) return 0;
-  int n=matrix[0].size();
-  if (n==0) return 0;
-  vector<int> L(n,0);
-  vector<int> R(n,n);
-  vector<int> H(n,0);
+  if( matrix.empty() )
+    return 0;
+
   int r = 0;
-  for(int i = 0; i < m; i++) {
-    int left  = 0, right = n;
-    for(int j = 0; j < n; j++) {
-      if( matrix[i][j] == '1' ) {
-        L[j] = max(L[j],left);
-        H[j]++;
-      } else {
-        L[j] = 0;
-        R[j] = n;
-        H[j] = 0;
-        left = j + 1;
-      }
+
+  for(int i = 0; i < matrix.size(); ++i)
+    for(int j = 0; j < matrix[0].size(); ++j) {
+      int leftUp = ( i && j ) ? matrix[i-1][j-1] : 0;
+      int left   = j ? matrix[i][j-1] : 0;
+      int up     = i ? matrix[i-1][j] : 0;
+
+      matrix[i][j] = matrix[i][j] != '0' ? min(leftUp, min(left, up)) + 1 : 0;
+      r = max(r, (int)matrix[i][j]);
     }
-    for(int j = n - 1; j >= 0; j--) {
-      if( matrix[i][j] == '1' ) {
-        R[j] = min(R[j],right);
-        r = max(r, H[j] * ( R[j] - L[j] ));
-      } else {
-        R[j] = n;
-        right = j;
-      }
-    }
-  }
-  return r;
+  return r * r;
 }
