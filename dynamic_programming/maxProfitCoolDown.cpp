@@ -19,7 +19,7 @@
  * transactions = [buy, sell, cooldown, buy, sell]
  */
 
-int maxProfitII(vector<int> & prices) {
+int maxProfitCoolDown(vector<int> & prices) {
   if( prices.size() < 2 )
     return 0;
 
@@ -45,4 +45,13 @@ int maxProfitII(vector<int> & prices) {
     }
   }
   return maxProfit[prices.size()-1];
+}
+
+int maxProfitCoolDown_novector(vector<int> & prices) {
+  int buy = INT_MIN; // the profit of holding stock
+  int sell = 0;      // the profit of selling stock
+  int cool = 0;      // the profit of cooldown
+  for(int i = 0; i < prices.size(); ++i)
+    tie(buy, sell, cool) = make_tuple(max(buy, cool - prices[i]), buy + prices[i], max(cool, sell));
+  return max(cool, sell);
 }
