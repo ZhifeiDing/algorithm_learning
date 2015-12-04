@@ -83,5 +83,8 @@ void test_NumMatrix();
 int maxProfitCoolDown(vector<int> & prices);
 void test_maxProfitCoolDown();
 int maxProfitCoolDown_novector(vector<int> & prices);
+
+int maxCoins(vector<int> &nums);
+void test_maxCoins();
 #endif
 
