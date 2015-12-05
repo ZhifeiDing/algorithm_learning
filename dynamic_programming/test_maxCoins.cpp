@@ -9,4 +9,5 @@ void test_maxCoins() {
   print_array(nums);
 
   cout << "Max Coins of Burst Ballons = " << maxCoins(nums) << endl;
+  cout << "Max Coins of Burst Ballons = " << maxCoins_dc(nums) << endl;
 }

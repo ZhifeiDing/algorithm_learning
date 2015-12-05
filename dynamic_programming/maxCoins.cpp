@@ -52,3 +52,34 @@ int maxCoins(vector<int> &nums) {
 
   return coins[0][n-1];
 }
+
+
+/*
+ * we can also use divide & conquer with memorization from top to bottom
+ */
+int maxCoinsHelper(vector<int> &num, int left, int right, vector<vector<int> > &coins) {
+  if( left + 1 == right )
+    return 0;
+  if( coins[left][right] > 0 )
+    return coins[left][right];
+
+  for(int i = left + 1; i < right; ++i)
+    coins[left][right] = max(coins[left][right], num[left] * num[i] * num[right] + maxCoinsHelper(num, left, i, coins) +
+                                                       maxCoinsHelper(num, i, right, coins));
+  return coins[left][right];
+}
+
+int maxCoins_dc(vector<int> &nums) {
+  vector<int> num(nums.size()+2);
+  int n = 1;
+  // remove any zero numbwers first
+  for(auto itr : nums)
+    if( itr )
+      num[n++] = itr;
+
+  // add the sentinel 
+  num[0] = num[n++] = 1;
+  vector<vector<int> > coins(n, vector<int>(n,0));
+  maxCoinsHelper(num, 0, n - 1, coins);
+  return coins[0][n-1];
+}

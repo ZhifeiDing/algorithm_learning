@@ -86,5 +86,6 @@ int maxProfitCoolDown_novector(vector<int> & prices);
 
 int maxCoins(vector<int> &nums);
 void test_maxCoins();
+int maxCoins_dc(vector<int> &nums);
 #endif
 
