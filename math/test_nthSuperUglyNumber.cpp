@@ -29,4 +29,5 @@ void test_nthSuperUglyNumber() {
   print_array(primes);
   int r = nthSuperUglyNumber(n, primes);
   cout << n << "th ugly number = " << r << endl;
+  cout << n << "th ugly number = " << nthSuperUglyNumber_dp(n, primes) << endl;
 }

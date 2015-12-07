@@ -131,5 +131,9 @@ void test_canWinNim();
 int divide(int dividend, int divisor);
 void test_divide();
 int divide_bs(int dividend, int divisor);
+
+int nthSuperUglyNumber(int n,  vector<int> & primes);
+void test_nthSuperUglyNumber();
+int nthSuperUglyNumber_dp(int n,  vector<int> & primes);
 #endif
 
