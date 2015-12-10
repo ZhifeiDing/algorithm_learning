@@ -90,5 +90,8 @@ int maxCoins_dc(vector<int> &nums);
 
 int maxProfitII(vector<int> &prices);
 void test_maxProfitII();
+
+int maxProfitIII(vector<int> &prices);
+void test_maxProfitIII();
 #endif
 
