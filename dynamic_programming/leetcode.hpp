@@ -93,5 +93,8 @@ void test_maxProfitII();
 
 int maxProfitIII(vector<int> &prices);
 void test_maxProfitIII();
+
+int maxProfitVI(int k, vector<int> &prices);
+void test_maxProfitVI();
 #endif
 
