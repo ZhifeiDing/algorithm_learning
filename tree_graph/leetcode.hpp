@@ -75,5 +75,8 @@ void test_NumArray();
 
 vector<int> findMinHeightTrees(int n, vector<pair<int, int> > edges);
 void test_findMinHeightTrees();
+
+vector<int> countSmaller(vector<int> &nums);
+void test_countSmaller();
 #endif
 
