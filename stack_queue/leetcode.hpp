@@ -55,5 +55,8 @@ string simplifyPath(string path);
 void test_simplifyPath();
 
 void test_ValidWordAbbr();
+
+string removeDuplicateLetters(string s);
+void test_removeDuplicateLetters();
 #endif
 
