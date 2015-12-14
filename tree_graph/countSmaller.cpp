@@ -19,7 +19,24 @@
 // segment tree solution
 struct SegmentTreeNode {
   
-}
+};
 
 vector<int> countSmaller(vector<int> &nums) {
+}
+
+
+// insertion sort solution
+void insertSort(int num, vector<int> &r, vector<int> &sortNums, int idx) {
+  int pos = distance(sortNums.begin(),lower_bound(sortNums.begin(), sortNums.end(), num));
+  sortNums.insert(sortNums.begin() + pos, num);
+  r[idx] =  pos;
+}
+
+vector<int> countSmaller_insertSort(vector<int> &nums) {
+  vector<int> r(nums.size(),0);
+  vector<int> sortNums;
+
+  for(int i = nums.size() - 1; i >= 0; --i)
+    insertSort(nums[i], r, sortNums, i);
+  return r;
 }
