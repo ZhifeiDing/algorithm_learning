@@ -16,16 +16,43 @@
  * Return the array [2, 1, 1, 0].
  */
 
-// segment tree solution
-struct SegmentTreeNode {
-  
+
+// BST solution
+struct Node {
+  int val;
+  int count;
+  Node *left;
+  Node *right;
+  Node(int v, int c) : val(v), count(c), left(NULL), right(NULL) {}
 };
 
-vector<int> countSmaller(vector<int> &nums) {
+int updateBST(int num, Node *node, int cnt) {
+  if( node->val == num ) {
+    ++node->count;
+    return cnt + ( node->left == NULL ? 0 : node->left->count );
+  } else if( node->val > num ) {
+    if( node->left == NULL )
+      node->left = new Node(num, cnt);
+    return updateBST(num, node->left, cnt);
+  } else {
+    if( node->right == NULL )
+      node->right = new Node(num, node->count + cnt);
+    return updateBST(num, node->right, node->count + cnt);
+  }
 }
 
+vector<int> countSmaller_BST(vector<int> &nums) {
+  vector<int> r(nums.size(), 0);
+  if( nums.size() < 2 )
+    return r;
+  Node *root = new Node(nums.back(),0);
+  for(int i = nums.size()-2; i >= 0; --i)
+    r[i] = updateBST(nums[i], root, 0);
+  return r;
+}
 
 // insertion sort solution
+// O(n^2)
 void insertSort(int num, vector<int> &r, vector<int> &sortNums, int idx) {
   int pos = distance(sortNums.begin(),lower_bound(sortNums.begin(), sortNums.end(), num));
   sortNums.insert(sortNums.begin() + pos, num);

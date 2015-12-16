@@ -10,4 +10,7 @@ void test_countSmaller() {
   vector<int> r = countSmaller_insertSort(nums);
   cout << "smaller number = " ;
   print_array(r);
+  r = countSmaller_BST(nums);
+  cout << "smaller number = " ;
+  print_array(r);
 }
