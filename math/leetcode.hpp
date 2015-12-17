@@ -135,5 +135,8 @@ int divide_bs(int dividend, int divisor);
 int nthSuperUglyNumber(int n,  vector<int> & primes);
 void test_nthSuperUglyNumber();
 int nthSuperUglyNumber_dp(int n,  vector<int> & primes);
+
+int maxProducts(vector<string> &words);
+void test_maxProducts();
 #endif
 
