@@ -28,19 +28,19 @@
  */
 int maxProducts(vector<string> &words) {
   vector<int> bit(words.size(),0);
-  vector<int> len(words.size(),0);
+  //vector<int> len(words.size(),0);
 
   int r = 0;
 
   for(int i = 0; i < words.size(); ++i) {
     for(auto itr : words[i]) {
       bit[i] |= 1 << ( itr - 'a' );
-      ++len[i];
+      //++len[i];
     }
     
     for(int j = 0; j < i; ++j) {
       if( ! (bit[j] && bit[i] ) )
-        r = max(r, len[i] * len[j]);
+        r = max(r, int(words[i].size() * words[j].size()));
     }
   }
   return r;
