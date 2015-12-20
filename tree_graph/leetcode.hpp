@@ -78,6 +78,10 @@ void test_findMinHeightTrees();
 
 vector<int> countSmaller(vector<int> &nums);
 vector<int> countSmaller_insertSort(vector<int> &nums);
+vector<int> countSmaller_BST(vector<int> &nums);
 void test_countSmaller();
+
+vector<vector<int> > zigzagLevelOrder(TreeNode* root);
+void test_zigzagLevelOrder();
 #endif
 
