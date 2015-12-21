@@ -83,5 +83,11 @@ void test_countSmaller();
 
 vector<vector<int> > zigzagLevelOrder(TreeNode* root);
 void test_zigzagLevelOrder();
+
+vector<vector<int> > levelOrder(TreeNode *root);
+void test_levelOrder();
+
+int minDepth(TreeNode *root);
+void test_minDepth();
 #endif
 
