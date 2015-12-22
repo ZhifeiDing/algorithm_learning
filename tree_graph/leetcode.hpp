@@ -89,5 +89,13 @@ void test_levelOrder();
 
 int minDepth(TreeNode *root);
 void test_minDepth();
+int minDepth_recursive(TreeNode *root);
+
+int maxDepth_recursive(TreeNode *root);
+int maxDepth(TreeNode *root);
+void test_maxDepth();
+
+TreeNode* buildTree(vector<int> &inorder, vector<int> &postorder);
+void test_buildTree();
 #endif
 
