@@ -31,3 +31,16 @@ int minDepth(TreeNode *root) {
 
   return level;
 }
+
+int minDepth_recursive(TreeNode *root) {
+  if( root == NULL )
+    return 0;
+  if( root->left == NULL && root->right == NULL )
+    return 1;
+  else if( root->left == NULL )
+    return 1 + minDepth_recursive(root->right);
+  else if( root->right == NULL )
+    return 1 + minDepth_recursive(root->left);
+  else
+    return 1 + min(minDepth_recursive(root->left), minDepth_recursive(root->right));
+}

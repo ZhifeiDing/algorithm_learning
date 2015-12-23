@@ -16,4 +16,5 @@ void test_minDepth() {
 
   int r = minDepth(&root);
   cout << "min depth = " << r << endl;
+  cout << "min depth = " << minDepth_recursive(&root) << endl;
 }
