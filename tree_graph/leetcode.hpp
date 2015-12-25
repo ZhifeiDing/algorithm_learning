@@ -97,5 +97,11 @@ void test_maxDepth();
 
 TreeNode* buildTree(vector<int> &inorder, vector<int> &postorder);
 void test_buildTree();
+
+TreeNode* buildTreeI(vector<int> &preorder, vector<int> &inorder);
+void test_buildTreeI();
+
+TreeNode* sortedArrayToBST(vector<int> &nums);
+void test_sortedArrayToBST();
 #endif
 
