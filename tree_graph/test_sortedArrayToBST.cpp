@@ -17,4 +17,14 @@ void test_sortedArrayToBST() {
       cout << j << "\t";
     cout << endl;
   }
+
+  root = sortedArrayToBST_iterative(nums);
+
+  r = levelOrder(root);
+  cout << "level order = " << endl;
+  for(int i = 0; i < r.size(); ++i) {
+    for(auto j : r[i])
+      cout << j << "\t";
+    cout << endl;
+  }
 }
