@@ -33,6 +33,18 @@ struct TreeNode {
       TreeNode(int x, TreeNode* l, TreeNode* r) : val(x), left(l), right(r) {}
 };
 
+class ListNode {
+  public:
+    int val;
+    ListNode* next;
+    explicit ListNode() {};
+    explicit ListNode(int x) : val(x) {};
+    explicit ListNode(int x,ListNode* l) : val(x),next(l) {};
+};
+
+void print_list(ListNode* p, const string & s = "");
+void gen_list(int n, ListNode* p,bool sorted = false);
+
 vector<vector<int> > levelOrderBottom(TreeNode* root);
 void test_levelOrderBottom(void);
 
@@ -102,6 +114,13 @@ TreeNode* buildTreeI(vector<int> &preorder, vector<int> &inorder);
 void test_buildTreeI();
 
 TreeNode* sortedArrayToBST(vector<int> &nums);
+TreeNode* sortedArrayToBST_iterative(vector<int> &nums);
 void test_sortedArrayToBST();
+
+TreeNode* sortedListToBST(ListNode* head);
+void test_sortedListToBST();
+
+vector<vector<int> > verticalOrder(TreeNode* root);
+void test_verticalOrder();
 #endif
 

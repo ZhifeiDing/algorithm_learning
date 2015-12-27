@@ -43,3 +43,24 @@ void print_string(string & s) {
     cout << s[i];
   cout << endl;
 }
+
+void print_list(ListNode* p, const string & s) {
+  cout << s << " : ";
+  while( p ) {
+    cout << p->val << " ";
+    p = p->next;
+  }
+  cout << endl;
+}
+
+void gen_list(int n, ListNode* p,bool sorted) {
+  // generate two list
+  vector<int> a;
+  gen_array(n,a,10);
+  if(sorted) sort(a.begin(),a.end());
+
+  for(int i = 0; i < n;i++) {
+     p->next = new ListNode(a[i],NULL);
+     p = p->next;
+  }
+}
