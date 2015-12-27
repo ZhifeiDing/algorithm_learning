@@ -119,6 +119,7 @@ void test_sortedArrayToBST();
 
 TreeNode* sortedListToBST(ListNode* head);
 void test_sortedListToBST();
+TreeNode* sortedListToBST_n(ListNode* head);
 
 vector<vector<int> > verticalOrder(TreeNode* root);
 void test_verticalOrder();
