@@ -138,5 +138,8 @@ int nthSuperUglyNumber_dp(int n,  vector<int> & primes);
 
 int maxProducts(vector<string> &words);
 void test_maxProducts();
+
+int bulbSwitch(int n);
+void test_bulbSwitch();
 #endif
 
