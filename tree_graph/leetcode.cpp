@@ -64,3 +64,13 @@ void gen_list(int n, ListNode* p,bool sorted) {
      p = p->next;
   }
 }
+
+void print_tree(TreeNode *root, const string &s) {
+  cout << s << endl;
+  vector<vector<int> > r = levelOrder(root);
+  for(int i = 0; i < r.size(); ++i) {
+    for(auto j : r[i])
+      cout << j << "\t";
+    cout << endl;
+  }
+}

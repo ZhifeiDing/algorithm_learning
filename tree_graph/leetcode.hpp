@@ -45,6 +45,8 @@ class ListNode {
 void print_list(ListNode* p, const string & s = "");
 void gen_list(int n, ListNode* p,bool sorted = false);
 
+void print_tree(TreeNode *root, const string &s = "Tree = ");
+
 vector<vector<int> > levelOrderBottom(TreeNode* root);
 void test_levelOrderBottom(void);
 
@@ -123,5 +125,9 @@ TreeNode* sortedListToBST_n(ListNode* head);
 
 vector<vector<int> > verticalOrder(TreeNode* root);
 void test_verticalOrder();
+
+vector<int> inorderTraversal(TreeNode* root);
+void test_inorderTraversal();
+vector<int> inorderTraversal_iterative(TreeNode* root);
 #endif
 
