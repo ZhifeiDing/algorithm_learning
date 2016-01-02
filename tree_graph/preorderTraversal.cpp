@@ -36,18 +36,20 @@ vector<int> preorderTraversal_iterative(TreeNode* root) {
   vector<int> r;
 
   stack<TreeNode*> s;
+  if( root )
+    s.push(root);
 
-  while( !s.empty() || root ) {
-    if( s.empty() || root != NULL ) {
-      s.push(root);
-      root = root->left;
-    } else {
-      root = s.top();
-      s.pop();
+  while( !s.empty() ) {
+    root = s.top();
+    s.pop();
+    r.push_back(root->val);
 
-      r.push_back(root->val);
-      root = root->right;
-    }
+    if( root->right != NULL ) {
+      s.push(root->right);
+    } 
+    if( root->left != NULL ) {
+      s.push(root->left);
+    } 
   }
   return r;
 }
