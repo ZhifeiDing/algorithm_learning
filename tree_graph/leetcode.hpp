@@ -129,5 +129,23 @@ void test_verticalOrder();
 vector<int> inorderTraversal(TreeNode* root);
 void test_inorderTraversal();
 vector<int> inorderTraversal_iterative(TreeNode* root);
+vector<int> inorderTraversal_morris(TreeNode* root);
+
+vector<int> preorderTraversal(TreeNode* root);
+void test_preorderTraversal();
+vector<int> preorderTraversal_iterative(TreeNode* root);
+vector<int> preorderTraversal_morris(TreeNode* root);
+
+
+vector<int> postorderTraversal(TreeNode* root);
+void test_postorderTraversal();
+vector<int> postorderTraversal_iterative(TreeNode* root);
+vector<int> postorderTraversal_morris(TreeNode* root);
+
+int maxPathSum(TreeNode* root);
+void test_maxPathSum();
+
+void flatten(TreeNode* root);
+void test_flatten();
 #endif
 
