@@ -25,4 +25,9 @@ void test_preorderTraversal() {
   r = preorderTraversal_iterative(&root);
 
   print_array(r);
+
+  cout << "Morris = " << endl;
+  r = preorderTraversal_morris(&root);
+
+  print_array(r);
 }
