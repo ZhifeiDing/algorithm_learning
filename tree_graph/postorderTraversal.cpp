@@ -36,6 +36,7 @@ vector<int> postorderTraversal_iterative(TreeNode* root) {
   vector<int> r;
 
   stack<TreeNode*> s;
+  TreeNode *pre;
 
   while( !s.empty() || root ) {
     if( s.empty() || root != NULL ) {
@@ -43,10 +44,15 @@ vector<int> postorderTraversal_iterative(TreeNode* root) {
       root = root->left;
     } else {
       root = s.top();
-      s.pop();
 
-      r.push_back(root->val);
-      root = root->right;
+      if( !root->right || pre == root->right ) {
+        r.push_back(root->val);
+        s.pop();
+        pre = root;
+        root = NULL;
+      } else {
+        root = root->right;
+      }
     }
   }
   return r;
