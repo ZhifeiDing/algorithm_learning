@@ -51,3 +51,29 @@ vector<int> inorderTraversal_iterative(TreeNode* root) {
   }
   return r;
 }
+
+vector<int> inorderTraversal_morris(TreeNode* root) {
+  vector<int> r;
+
+  while( root ) {
+    if( root->left == NULL ) {
+      r.push_back(root->val);
+      root = root->right;
+    } else {
+      TreeNode *pre = root->left;
+
+      while( pre->right && pre->right != root )
+        pre = pre->right;
+
+      if( !pre->right ) {
+        pre->right = root;
+        root = root->left;
+      } else {
+        pre->right = NULL;
+        r.push_back(root->val);
+        root = root->right;
+      }
+    }
+  }
+  return r;
+}

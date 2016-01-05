@@ -16,13 +16,21 @@ void test_inorderTraversal() {
   
   print_tree(&root);
 
+  // recursive 
   cout << "Recursive = " << endl;
   vector<int> r = inorderTraversal(&root);
 
   print_array(r);
 
+  // iterative
   cout << "Iterative = " << endl;
   r = inorderTraversal_iterative(&root);
+
+  print_array(r);
+
+  // morris traversal
+  cout << "Morris = " << endl;
+  r = inorderTraversal_morris(&root);
 
   print_array(r);
 }
