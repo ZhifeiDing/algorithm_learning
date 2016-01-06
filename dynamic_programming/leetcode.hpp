@@ -96,5 +96,8 @@ void test_maxProfitIII();
 
 int maxProfitVI(int k, vector<int> &prices);
 void test_maxProfitVI();
+
+int numTrees(int n);
+void test_numTrees();
 #endif
 
