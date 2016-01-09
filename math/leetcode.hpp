@@ -141,5 +141,8 @@ void test_maxProducts();
 
 int bulbSwitch(int n);
 void test_bulbSwitch();
+
+bool isPowerOfThree(int n);
+void test_isPowerOfThree();
 #endif
 
