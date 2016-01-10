@@ -12,6 +12,7 @@
 #include<unordered_set>
 #include<algorithm>
 #include<bitset>
+#include<queue>
 #include<sstream>
 #include<string>
 #include<cstdlib>
@@ -23,6 +24,14 @@ void print_array(vector<int> & data, const string s = "Data");
 void gen_string(string & s, int n , bool strict );
 void print_string(string & s);
 
+struct TreeNode {
+      int val;
+      TreeNode *left;
+      TreeNode *right;
+      TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+      TreeNode(int x, TreeNode* l, TreeNode* r) : val(x), left(l), right(r) {}
+};
+
 
 
 class ListNode {
@@ -33,6 +42,8 @@ class ListNode {
     explicit ListNode(int x) : val(x) {};
     explicit ListNode(int x,ListNode* l) : val(x),next(l) {};
 };
+
+void print_tree(TreeNode *root, const string &s = "Tree=");
 
 void test_combinationSum(void);
 vector<vector<int>> combinationSum(vector<int>& candidates, int target);
@@ -86,5 +97,8 @@ void test_removeInvalidParentheses();
 
 bool isAdditiveNumber(string num);
 void test_isAdditiveNumber();
+
+vector<TreeNode*> generateTrees(int n);
+void test_generateTrees();
 #endif
 
