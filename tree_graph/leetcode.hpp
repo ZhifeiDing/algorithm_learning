@@ -147,6 +147,7 @@ void test_maxPathSum();
 
 void flatten(TreeNode* root);
 void test_flatten();
+void flatten_iterative(TreeNode* root);
 
 bool isValidBST(TreeNode* root);
 void test_isValidBST();
