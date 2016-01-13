@@ -151,5 +151,8 @@ void flatten_iterative(TreeNode* root);
 
 bool isValidBST(TreeNode* root);
 void test_isValidBST();
+
+void recoverTree(TreeNode* root);
+void test_recoverTree();
 #endif
 
