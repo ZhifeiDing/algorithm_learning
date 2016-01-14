@@ -27,3 +27,29 @@ void recoverTree(TreeNode* root) {
     recoverTreeHelper(root, prev, first, second);
     swap(first->val, second->val);
 }
+
+void recoverTree_iterative(TreeNode* root) {
+    TreeNode *first = NULL, *second = NULL, *prev = NULL;
+    while( root ) {
+        if( root->left ) {
+            TreeNode *t = root->left;
+            while( t->right && t->right != root )
+                t = t->right;
+            if( t->right == NULL ) {
+                t->right = root;
+                root = root->left;
+                continue;
+            } else {
+                t->right = NULL;
+            }
+        }
+        if( prev && prev->val >= root->val ) {
+            if( first == NULL )
+                first = prev;
+            second = root;
+        }
+        prev = root;
+        root = root->right;
+    }
+    swap(first->val, second->val);
+}
