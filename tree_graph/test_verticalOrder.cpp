@@ -16,6 +16,7 @@ void test_verticalOrder() {
   print_tree(&root);
 
   vector<vector<int> > r = verticalOrder(&root);
+  cout << endl << "vertical order = ";
   for(auto i : r) {
       for(auto j : i)
           cout << j << "\t";
