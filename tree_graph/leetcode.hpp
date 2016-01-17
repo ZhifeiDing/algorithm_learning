@@ -155,5 +155,8 @@ void test_isValidBST();
 void recoverTree(TreeNode* root);
 void test_recoverTree();
 void recoverTree_iterative(TreeNode* root);
+
+bool isSymmetric(TreeNode *root);
+void test_isSymmetric();
 #endif
 
