@@ -32,3 +32,24 @@ bool isSymmetric(TreeNode *root) {
         return true;
     return isSymmetricHelper(root->left, root->right);
 }
+
+// iterative method
+
+bool isSymmetric_iterative(TreeNode *root) {
+    if( root == NULL )
+        return true;
+    queue<pair<TreeNode*,TreeNode*> > q;
+    q.push(make_pair(root->left, root->right));
+    while( !q.empty() ) {
+        TreeNode *left = q.top().first;
+        TreeNode *right = q.top().second;
+        q.pop();
+        if( left == NULL && right == NULL )
+            continue;
+        if( left == NULL ^ right == NULL )
+            return false;
+        q.push(make_pair(left->left, right->right));
+        q.push(make_pair(left->right, right->left));
+    }
+    return true;
+}
