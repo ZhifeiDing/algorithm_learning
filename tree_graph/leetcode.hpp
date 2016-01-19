@@ -158,5 +158,6 @@ void recoverTree_iterative(TreeNode* root);
 
 bool isSymmetric(TreeNode *root);
 void test_isSymmetric();
+bool isSymmetric_iterative(TreeNode *root);
 #endif
 
