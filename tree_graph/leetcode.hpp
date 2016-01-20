@@ -159,5 +159,11 @@ void recoverTree_iterative(TreeNode* root);
 bool isSymmetric(TreeNode *root);
 void test_isSymmetric();
 bool isSymmetric_iterative(TreeNode *root);
+
+int closestValue(TreeNode *root, double target);
+void test_closestValue();
+
+vector<vector<int> > pathSum(TreeNode *root, int sum);
+void test_pathSum();
 #endif
 
