@@ -41,8 +41,8 @@ bool isSymmetric_iterative(TreeNode *root) {
     queue<pair<TreeNode*,TreeNode*> > q;
     q.push(make_pair(root->left, root->right));
     while( !q.empty() ) {
-        TreeNode *left = q.top().first;
-        TreeNode *right = q.top().second;
+        TreeNode *left = q.front().first;
+        TreeNode *right = q.front().second;
         q.pop();
         if( left == NULL && right == NULL )
             continue;
