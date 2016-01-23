@@ -165,5 +165,8 @@ void test_closestValue();
 
 vector<vector<int> > pathSum(TreeNode *root, int sum);
 void test_pathSum();
+
+TreeNode *upsideDownBinaryTree(TreeNode *root);
+void test_upsideDownBinaryTree();
 #endif
 
