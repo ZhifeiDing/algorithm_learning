@@ -168,5 +168,8 @@ void test_pathSum();
 
 TreeNode *upsideDownBinaryTree(TreeNode *root);
 void test_upsideDownBinaryTree();
+
+int longestConsecutive(TreeNode *root);
+void test_longestConsecutive();
 #endif
 
