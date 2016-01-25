@@ -171,5 +171,8 @@ void test_upsideDownBinaryTree();
 
 int longestConsecutive(TreeNode *root);
 void test_longestConsecutive();
+
+bool validTree(int n, vector<pair<int,int> > &edges);
+void test_validTree();
 #endif
 
