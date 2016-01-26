@@ -22,32 +22,32 @@
  *edges are undirected, [0, 1] is the same as [1, 0] and thus will not appear
  *together inedges.
  */
-bool isCycle(vector<pair<int,int> > &edges, int startpoint, int &targetpoint, vector<bool> visited) {
-    for(int i = 0; i < edges.size(); ++i) {
-        if( visited[i] )
-            continue;
-        visited[i] = true;
-        if( edges[i].first == startpoint ) {
-            if( edges[i].second == targetpoint || isCycle(edges, edges[i].second, targetpoint, visited) )
-                return true;
-        }
-        if( edges[i].second == startpoint ) {
-            if( edges[i].first == targetpoint || isCycle(edges, edges[i].first, targetpoint, visited) )
-                return true;
-        }
-    }
-    return false;
+
+void dfs(vector<vector<int> > &adjList, vector<bool> &visited, int idx = 0) {
+    if( visited[idx] )
+        return;
+    visited[idx] = true;
+    for(auto vertic : adjList[idx])
+        dfs(adjList, visited, vertic);
 }
 
+// for a valid tree, we should be able to traverse all vertices from one vertice
 bool validTree(int n, vector<pair<int,int> > &edges) {
-    if( edges.size() > n - 1 )
+    if( edges.size() != n - 1 )
         return false;
-    vector<bool> visited(n,false);
-    for(int i = 0; i < edges.size(); ++i) {
-        visited[i] = true;
-        if( isCycle(edges, edges[i].first, edges[i].second, visited) )
-            return false;
-        visited[i] = false;
+    vector<vector<int> > adjList(n);
+    for(auto edge : edges) {
+        adjList[edge.first].push_back(edge.second);
+        adjList[edge.second].push_back(edge.first);
     }
-    return true;
+    vector<bool> visited(n,false);
+    dfs(adjList, visited);
+    bool res = true;
+    for(auto v : visited)
+        res &= v;
+    return res;
+}
+
+// union find solution
+bool validTree_UF(int n, vector<pair<int,int> > &edges) {
 }
