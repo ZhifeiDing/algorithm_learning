@@ -144,5 +144,8 @@ void test_bulbSwitch();
 
 bool isPowerOfThree(int n);
 void test_isPowerOfThree();
+
+vector<int> grayCode(int n);
+void test_grayCode();
 #endif
 
