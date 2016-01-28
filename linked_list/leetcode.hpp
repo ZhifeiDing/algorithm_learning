@@ -19,7 +19,7 @@
 using namespace std;
 
 void gen_array(int n, vector<int> & data, int base = 97);
-void print_array(vector<int> & data);
+void print_array(vector<int> & data, string s = "Data");
 void gen_string(string & s, int n , bool strict );
 void print_string(string & s);
 
@@ -106,5 +106,11 @@ void test_plusOne();
 
 string addBinary(string a, string b);
 void test_addBinary();
+
+ListNode *partition(ListNode *head, int x);
+void test_partition();
+
+void sortColors(vector<int> &nums);
+void test_sortColors();
 #endif
 
