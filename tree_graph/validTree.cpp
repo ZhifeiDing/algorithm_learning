@@ -50,4 +50,13 @@ bool validTree(int n, vector<pair<int,int> > &edges) {
 
 // union find solution
 bool validTree_UF(int n, vector<pair<int,int> > &edges) {
+    if( edges.size() != n - 1 )
+        return false;
+    vector<int> adjList(n);
+    for(auto edge : edges) {
+        adjList[edge.first] = edge.second;
+        adjList[edge.second] = edge.first;
+    }
+
+
 }
