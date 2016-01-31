@@ -112,5 +112,8 @@ void test_partition();
 
 void sortColors(vector<int> &nums);
 void test_sortColors();
+
+ListNode *oddEvenList(ListNode *head);
+void test_oddEvenList();
 #endif
 
