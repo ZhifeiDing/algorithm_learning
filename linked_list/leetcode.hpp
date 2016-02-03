@@ -9,6 +9,7 @@
 #include<ctime>
 #include<utility>
 #include<unordered_map>
+#include<unordered_set>
 #include<algorithm>
 #include<bitset>
 #include<sstream>
@@ -115,5 +116,14 @@ void test_sortColors();
 
 ListNode *oddEvenList(ListNode *head);
 void test_oddEvenList();
+
+ListNode* reverseKGroup(ListNode *head, int k);
+void test_reverseKGroup();
+
+ListNode* rotateRight(ListNode *head, int k);
+void test_rotateRight();
+
+ListNode* deleteDuplicatesII(ListNode* head);
+void test_deleteDuplicatesII();
 #endif
 
