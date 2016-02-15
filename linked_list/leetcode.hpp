@@ -125,5 +125,8 @@ void test_rotateRight();
 
 ListNode* deleteDuplicatesII(ListNode* head);
 void test_deleteDuplicatesII();
+
+ListNode *removeNthFromEnd(ListNode *head, int n);
+void test_removeNthFromEnd();
 #endif
 
