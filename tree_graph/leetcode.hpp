@@ -10,6 +10,7 @@
 #include<utility>
 #include<unordered_map>
 #include<unordered_set>
+#include<set>
 #include<algorithm>
 #include<bitset>
 #include<sstream>
@@ -31,6 +32,15 @@ struct TreeNode {
       TreeNode *right;
       TreeNode(int x) : val(x), left(NULL), right(NULL) {}
       TreeNode(int x, TreeNode* l, TreeNode* r) : val(x), left(l), right(r) {}
+};
+
+struct TreeLinkNode {
+    int val;
+   TreeLinkNode *left;
+   TreeLinkNode *right;
+   TreeLinkNode *next;
+   TreeLinkNode(int x) : val(x), left(NULL), right(NULL), next(NULL) {}
+   TreeLinkNode(int x, TreeLinkNode *l, TreeLinkNode *r, TreeLinkNode *n) : val(x), left(l), right(r), next(n) {}
 };
 
 class ListNode {
@@ -174,5 +184,17 @@ void test_longestConsecutive();
 
 bool validTree(int n, vector<pair<int,int> > &edges);
 void test_validTree();
+
+bool isValidSerialization(string preorder);
+void test_isValidSerialization();
+
+vector<string> findItinerary(vector<pair<string,string> > &tickets);
+void test_findItinerary();
+
+void connect(TreeLinkNode *root);
+void test_connect();
+
+void connectII(TreeLinkNode *root);
+void test_connectII();
 #endif
 
