@@ -58,5 +58,8 @@ void test_ValidWordAbbr();
 
 string removeDuplicateLetters(string s);
 void test_removeDuplicateLetters();
+
+bool increasingTriplet(vector<int>& nums);
+void test_increasingTriplet();
 #endif
 
