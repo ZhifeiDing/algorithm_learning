@@ -147,5 +147,8 @@ void test_isPowerOfThree();
 
 vector<int> grayCode(int n);
 void test_grayCode();
+
+vector<vector<int> > generate(int numRows);
+void test_generate();
 #endif
 

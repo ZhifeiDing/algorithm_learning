@@ -14,7 +14,7 @@ void print_array(vector<int> & data) {
 
 void gen_string(string & s, int n , bool strict ) {
 
-  srand((unsigned int)time(NULL));
+  //srand((unsigned int)time(NULL));
   int i = 0;
   unsigned char start = strict ? 'a' : '!';
   unsigned char end = strict ? 'z' : '~';

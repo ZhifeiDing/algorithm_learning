@@ -41,5 +41,8 @@ bool canJump(vector<int>& nums);
 bool canJump_start(vector<int>& nums);
 void test_canJump(void);
 
+vector<string> fullJustify(vector<string> &words, int maxWidth);
+void test_fullJustify();
+
 #endif
 
