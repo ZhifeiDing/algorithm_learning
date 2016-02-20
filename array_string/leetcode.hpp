@@ -20,6 +20,13 @@
 
 using namespace std;
 
+struct Interval {
+    int start;
+    int end;
+    Interval() : start(0), end(0) {};
+    Interval(int s, int e) : start(s), end(e) {};
+};
+
 void gen_array(int n, vector<int> & data, int base_start = 0, int base_end = 97);
 void print_array(vector<int> & data, const string s = "Data");
 void gen_string(string & s, int n = 13, bool strict = false);
@@ -139,5 +146,14 @@ bool wordPattern_stringstream(string pattern, string str);
 
 string getHint(string secret, string guess);
 void test_getHint();
+
+vector<Interval> insert(vector<Interval> &intervals, Interval newInterval);
+void test_insert();
+
+void wiggleSort(vector<int> &nums);
+void test_wiggleSort();
+
+void wiggleSortII(vector<int> &nums);
+void test_wiggleSortII();
 #endif
 
