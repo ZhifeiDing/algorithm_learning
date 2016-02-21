@@ -99,5 +99,8 @@ void test_maxProfitVI();
 
 int numTrees(int n);
 void test_numTrees();
+
+int numDecodings(string s);
+void test_numDecodings();
 #endif
 
