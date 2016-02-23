@@ -150,5 +150,8 @@ void test_grayCode();
 
 vector<vector<int> > generate(int numRows);
 void test_generate();
+
+bool isSelfCrossing(vector<int> &x);
+void test_isSelfCrossing();
 #endif
 
