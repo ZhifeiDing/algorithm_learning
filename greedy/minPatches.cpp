@@ -26,9 +26,9 @@
  *Return 0.
  */
 int minPatches(vector<int> &nums, int n) {
-    int sum = 1, idx = 0, cnt = 0;
+    unsigned int sum = 1, idx = 0, cnt = 0;
 
-    while( sum < n ) {
+    while( sum <= n ) {
         if( idx < nums.size() && nums[idx] <= sum )
             sum += nums[idx++];
         else {
