@@ -44,5 +44,10 @@ void test_canJump(void);
 vector<string> fullJustify(vector<string> &words, int maxWidth);
 void test_fullJustify();
 
+int minPatches(vector<int> &nums, int n);
+void test_minPatches();
+
+vector<int> maxNumber(vector<int> &nums1, vector<int> &nums2, int k);
+void test_maxNumber();
 #endif
 
