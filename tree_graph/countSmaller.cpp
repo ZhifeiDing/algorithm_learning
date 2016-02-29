@@ -27,17 +27,17 @@ struct Node {
 };
 
 int updateBST(int num, Node *node, int cnt) {
+  ++node->count;
   if( node->val == num ) {
-    ++node->count;
-    return cnt + ( node->left == NULL ? 0 : node->left->count );
+    return node->count;
   } else if( node->val > num ) {
     if( node->left == NULL )
-      node->left = new Node(num, cnt);
+      node->left = new Node(num, cnt-1);
     return updateBST(num, node->left, cnt);
   } else {
     if( node->right == NULL )
       node->right = new Node(num, node->count + cnt);
-    return updateBST(num, node->right, node->count + cnt);
+    return updateBST(num, node->right, node->count);
   }
 }
 
