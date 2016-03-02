@@ -1,6 +1,7 @@
 #ifndef __LEETCODE_HPP__
 #define __LEETCODE_HPP__
 
+#include<functional>
 #include<climits>
 #include<vector>
 #include<list>
@@ -196,5 +197,9 @@ void test_connect();
 
 void connectII(TreeLinkNode *root);
 void test_connectII();
+
+int longestIncreasingPath(vector<vector<int> > &matrix);
+void test_longestIncreasingPath();
+int longestIncreasingPath_lambda(vector<vector<int> > &matrix);
 #endif
 

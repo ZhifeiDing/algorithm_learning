@@ -27,7 +27,7 @@
  *Return 4
  *The longest increasing path is [3, 4, 5, 6]. Moving diagonally is not allowed.
  */
-static vector<vector<int> > dirs = {{-1,0}, {1,0}, {0,-1}, {0,1}};
+static const vector<vector<int> > dirs = {{-1,0}, {1,0}, {0,-1}, {0,1}};
 
 int dfs(vector<vector<int> > &matrix, int i, int j, vector<vector<int> > &cached) {
     if( cached[i][j] )
@@ -48,9 +48,34 @@ int longestIncreasingPath(vector<vector<int> > &matrix) {
         return r;
     int n = matrix[0].size();
     vector<vector<int> > cached(m, vector<int>(n,0));
-    for(int i = 0; i < matrix.size(); ++i)
-        for(int j = 0; j < matrix[0].size(); ++j) {
-            r = max(r, dfs(matrix, i, j, cached));
+    for(int i = 0; i < m; ++i)
+        for(int j = 0; j < n; ++j) {
+            r = max(r, 1 + dfs(matrix, i, j, cached));
+        }
+    return r;
+}
+
+int longestIncreasingPath_lambda(vector<vector<int> > &matrix) {
+    int r = 0;
+    int m = matrix.size();
+    if( m == 0 )
+        return r;
+    int n = matrix[0].size();
+    vector<vector<int> > cached(m, vector<int>(n,0));
+    function<int(int,int)> dfs = [&] (int x, int y) {
+        if( cached[x][y] )
+            return cached[x][y];
+        for(auto dir : dirs) {
+            int xx = x + dir[0], yy = y + dir[1];
+            if( xx < 0 || yy < 0 || xx >= matrix.size() || yy >= matrix[0].size() || matrix[xx][yy] <= matrix[x][y] )
+                continue;
+            cached[x][y] = max(cached[x][y], 1 + dfs(xx,yy));
+        }
+        return cached[x][y];
+    };
+    for(int i = 0; i < m; ++i)
+        for(int j = 0; j < n; ++j) {
+            r = max(r, 1 + dfs(i, j));
         }
     return r;
 }

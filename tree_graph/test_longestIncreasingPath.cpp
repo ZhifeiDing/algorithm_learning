@@ -16,5 +16,6 @@ void test_longestIncreasingPath() {
   cout << endl;
   int r = longestIncreasingPath(matrix);
   cout << "longest increasing path = " << r << endl;
+  cout << "longest increasing path = " << longestIncreasingPath_lambda(matrix) << endl;
 
 }
