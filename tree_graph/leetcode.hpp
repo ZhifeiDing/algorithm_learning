@@ -201,5 +201,6 @@ void test_connectII();
 int longestIncreasingPath(vector<vector<int> > &matrix);
 void test_longestIncreasingPath();
 int longestIncreasingPath_lambda(vector<vector<int> > &matrix);
+int longestIncreasingPath_iterative(vector<vector<int> > &matrix);
 #endif
 

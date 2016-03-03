@@ -79,3 +79,35 @@ int longestIncreasingPath_lambda(vector<vector<int> > &matrix) {
         }
     return r;
 }
+
+// iterative solution
+int longestIncreasingPath_iterative(vector<vector<int> > &matrix) {
+
+    int r = 0;
+    int m = matrix.size();
+    if( m == 0 )
+        return r;
+    int n = matrix[0].size();
+
+    int cnt = m * n;
+    while( cnt ) {
+        vector<pair<int,int> > remove;
+        for(int i = 0; i < m; ++i)
+            for(int j = 0; j < n; ++j) {
+               if( matrix[i][j] == INT_MIN )
+                   continue;
+               bool up = i == 0 || matrix[i][j] >= matrix[i-1][j];
+               bool down = i == m-1 || matrix[i][j] >= matrix[i+1][j];
+               bool left = j == 0 || matrix[i][j] >= matrix[i][j-1];
+               bool right = j == n-1 || matrix[i][j] >= matrix[i][j+1];
+               if( up && down && left && right )
+                   remove.push_back(make_pair(i,j));
+            }
+        for(auto rem : remove) {
+            --cnt;
+            matrix[rem.first][rem.second] = INT_MIN;
+        }
+        ++r;
+    }
+    return r;
+}
