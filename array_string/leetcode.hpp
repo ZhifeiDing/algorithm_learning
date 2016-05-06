@@ -155,5 +155,14 @@ void test_wiggleSort();
 
 void wiggleSortII(vector<int> &nums);
 void test_wiggleSortII();
+
+string reverseString(string s);
+void test_reverseString();
+
+string reverseVowels(string s);
+void test_reverseVowels();
+
+string multiply(string num1, string num2);
+void test_multiply();
 #endif
 
