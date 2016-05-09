@@ -102,5 +102,10 @@ void test_numTrees();
 
 int numDecodings(string s);
 void test_numDecodings();
+
+int integerBreak(int n);
+int integerBreak_DP(int n);
+void test_integerBreak();
+
 #endif
 
