@@ -61,5 +61,8 @@ void test_removeDuplicateLetters();
 
 bool increasingTriplet(vector<int>& nums);
 void test_increasingTriplet();
+
+vector<int> topKFrequent(vector<int>& nums, int k);
+void test_topKFrequent();
 #endif
 
