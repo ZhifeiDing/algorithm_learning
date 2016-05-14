@@ -7,16 +7,18 @@ typedef void (*func)(void);
 int main() {
 	vector<func> test_cases;
 	vector<string> func_names;
-	test_cases.push_back(test_MedianFinder);
-	func_names.push_back("test_MedianFinder");
-	test_cases.push_back(test_hIndex);
-	func_names.push_back("test_hIndex");
-	test_cases.push_back(test_findKthLargest);
-	func_names.push_back("test_findKthLargest");
-	test_cases.push_back(test_getSkyline);
-	func_names.push_back("test_getSkyline");
+	test_cases.push_back(test_palindromePairs);
+	func_names.push_back("test_palindromePairs");
 	test_cases.push_back(test_hIndexII);
 	func_names.push_back("test_hIndexII");
+	test_cases.push_back(test_MedianFinder);
+	func_names.push_back("test_MedianFinder");
+	test_cases.push_back(test_findKthLargest);
+	func_names.push_back("test_findKthLargest");
+	test_cases.push_back(test_hIndex);
+	func_names.push_back("test_hIndex");
+	test_cases.push_back(test_getSkyline);
+	func_names.push_back("test_getSkyline");
 	while(true) {
 		string select;
 		cout << "Please choose a case:" << endl;

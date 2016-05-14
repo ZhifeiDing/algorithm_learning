@@ -11,6 +11,7 @@
 #include<queue>
 #include<unordered_map>
 #include<unordered_set>
+#include<set>
 #include<algorithm>
 #include<bitset>
 #include<sstream>
@@ -61,5 +62,8 @@ int hIndexII(vector<int>& citations);
 void test_hIndexII();
 
 void test_MedianFinder();
+
+vector<vector<int>> palindromePairs(vector<string>& words);
+void test_palindromePairs();
 #endif
 
