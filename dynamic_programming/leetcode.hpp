@@ -25,6 +25,13 @@ void print_string(string & s);
 int uniquePathsWithObstacles(vector<vector<int>>& obstacleGrid);
 void test_uniquePathsWithObstacles();
 
+struct TreeNode {
+      int val;
+      TreeNode *left;
+      TreeNode *right;
+      TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+      TreeNode(int x, TreeNode* l, TreeNode* r) : val(x), left(l), right(r) {}
+};
 
 class ListNode {
   public:
@@ -35,6 +42,8 @@ class ListNode {
     explicit ListNode(int x,ListNode* l) : val(x),next(l) {};
 };
 
+
+void print_tree(TreeNode *root, const string &s = "Tree = ");
 
 int numDistinct(string s, string t);
 void test_numDistinct(void);
@@ -106,6 +115,9 @@ void test_numDecodings();
 int integerBreak(int n);
 int integerBreak_DP(int n);
 void test_integerBreak();
+
+int robVI(TreeNode* root);
+void test_robVI();
 
 #endif
 
