@@ -119,5 +119,8 @@ void test_integerBreak();
 int robVI(TreeNode* root);
 void test_robVI();
 
+vector<int> countBits(int num);
+void test_countBits();
+
 #endif
 
