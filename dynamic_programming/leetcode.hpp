@@ -122,5 +122,8 @@ void test_robVI();
 vector<int> countBits(int num);
 void test_countBits();
 
+int coinChange(vector<int> &coins, int amount);
+void test_coinChange();
+
 #endif
 
