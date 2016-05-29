@@ -82,7 +82,7 @@ string longestPalindrome(string & s) {
       end = i + len1/2;
     }
   }
-  return s.substr(start,end + 1);
+  return s.substr(start,end -start + 1);
 }
 
 
