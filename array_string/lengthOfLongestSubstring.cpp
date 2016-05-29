@@ -52,7 +52,7 @@ int lengthOfLongestSubstring_map(string s) {
   unordered_map<char, int> charMap;
   for(int i = 0; i < s.size(); i++) {
     if( charMap.find(s[i]) != charMap.end() ) {
-      j = charMap[s[i]] + 1;
+      j = max(j,charMap[s[i]] + 1);
     }
     charMap[s[i]] = i;
     maxLen = max(maxLen, i - j + 1);
